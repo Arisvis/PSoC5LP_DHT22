@@ -1,0 +1,1484 @@
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_ui2f
+  20              		.section	.text.DHTread,"ax",%progbits
+  21              		.align	2
+  22              		.global	DHTread
+  23              		.thumb
+  24              		.thumb_func
+  25              		.type	DHTread, %function
+  26              	DHTread:
+  27              	.LFB64:
+  28              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** #include "stdio.h"
+  14:main.c        **** 
+  15:main.c        **** static float temperature=99;
+  16:main.c        **** static float humidity=99;
+  17:main.c        **** 
+  18:main.c        **** 
+  19:main.c        **** int DHTread() 
+  20:main.c        **** {     
+  29              		.loc 1 20 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+  34              		.cfi_def_cfa_offset 28
+  35              		.cfi_offset 4, -28
+  36              		.cfi_offset 5, -24
+  37              		.cfi_offset 6, -20
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 2
+
+
+  38              		.cfi_offset 7, -16
+  39              		.cfi_offset 8, -12
+  40              		.cfi_offset 9, -8
+  41              		.cfi_offset 14, -4
+  42 0004 83B0     		sub	sp, sp, #12
+  43              		.cfi_def_cfa_offset 40
+  21:main.c        ****    int i;
+  22:main.c        ****    uint16 IState;
+  23:main.c        ****    IState=CyEnterCriticalSection();  
+  44              		.loc 1 23 0
+  45 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+  46              	.LVL0:
+  47 000a 8146     		mov	r9, r0
+  48              	.LVL1:
+  24:main.c        ****     uint16 bits[2]; 
+  25:main.c        ****     uint16 cnt = 15; 
+  26:main.c        **** 	uint16 idx = 0; 
+  27:main.c        ****    int   calc=0; 
+  28:main.c        ****    int   timeout=0;
+  29:main.c        ****     
+  30:main.c        ****    for (i=0; i< 5; i++)  
+  49              		.loc 1 30 0
+  50 000c 0023     		movs	r3, #0
+  51 000e 06E0     		b	.L2
+  52              	.LVL2:
+  53              	.L3:
+  31:main.c        ****        bits[i] = 0; 
+  54              		.loc 1 31 0 discriminator 3
+  55 0010 02AA     		add	r2, sp, #8
+  56 0012 02EB4302 		add	r2, r2, r3, lsl #1
+  57 0016 0021     		movs	r1, #0
+  58 0018 22F8041C 		strh	r1, [r2, #-4]	@ movhi
+  30:main.c        ****        bits[i] = 0; 
+  59              		.loc 1 30 0 discriminator 3
+  60 001c 0133     		adds	r3, r3, #1
+  61              	.LVL3:
+  62              	.L2:
+  30:main.c        ****        bits[i] = 0; 
+  63              		.loc 1 30 0 is_stmt 0 discriminator 1
+  64 001e 042B     		cmp	r3, #4
+  65 0020 F6DD     		ble	.L3
+  32:main.c        ****   
+  33:main.c        ****    DHT_Write(0u); 
+  66              		.loc 1 33 0 is_stmt 1
+  67 0022 0020     		movs	r0, #0
+  68 0024 FFF7FEFF 		bl	DHT_Write
+  69              	.LVL4:
+  34:main.c        ****    CyDelay(19); 
+  70              		.loc 1 34 0
+  71 0028 1320     		movs	r0, #19
+  72 002a FFF7FEFF 		bl	CyDelay
+  73              	.LVL5:
+  35:main.c        ****    DHT_Write(1u);
+  74              		.loc 1 35 0
+  75 002e 0120     		movs	r0, #1
+  76 0030 FFF7FEFF 		bl	DHT_Write
+  77              	.LVL6:
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 3
+
+
+  28:main.c        ****     
+  78              		.loc 1 28 0
+  79 0034 0025     		movs	r5, #0
+  36:main.c        ****    
+  37:main.c        ****    while(DHT_Read()==1) 
+  80              		.loc 1 37 0
+  81 0036 03E0     		b	.L4
+  82              	.LVL7:
+  83              	.L6:
+  38:main.c        ****    { 
+  39:main.c        ****        timeout++; 
+  84              		.loc 1 39 0
+  85 0038 0135     		adds	r5, r5, #1
+  86              	.LVL8:
+  40:main.c        ****        if(timeout>500) 
+  87              		.loc 1 40 0
+  88 003a B5F5FA7F 		cmp	r5, #500
+  89 003e 4FDC     		bgt	.L5
+  90              	.LVL9:
+  91              	.L4:
+  37:main.c        ****    { 
+  92              		.loc 1 37 0
+  93 0040 FFF7FEFF 		bl	DHT_Read
+  94              	.LVL10:
+  95 0044 0128     		cmp	r0, #1
+  96 0046 F7D0     		beq	.L6
+  97 0048 03E0     		b	.L7
+  98              	.L8:
+  41:main.c        ****            goto r99;  //DHT error function 
+  42:main.c        ****    } 
+  43:main.c        ****    while(DHT_Read()==0) 
+  44:main.c        ****    {         
+  45:main.c        ****        timeout++; 
+  99              		.loc 1 45 0
+ 100 004a 0135     		adds	r5, r5, #1
+ 101              	.LVL11:
+  46:main.c        ****        if(timeout>500) 
+ 102              		.loc 1 46 0
+ 103 004c B5F5FA7F 		cmp	r5, #500
+ 104 0050 46DC     		bgt	.L5
+ 105              	.L7:
+  43:main.c        ****    {         
+ 106              		.loc 1 43 0
+ 107 0052 FFF7FEFF 		bl	DHT_Read
+ 108              	.LVL12:
+ 109 0056 0028     		cmp	r0, #0
+ 110 0058 F7D0     		beq	.L8
+ 111              	.L9:
+  47:main.c        ****            goto r99; //DHT error function 
+  48:main.c        ****    } 
+  49:main.c        ****    calc=timeout; 
+  50:main.c        ****    timeout=0; 
+  51:main.c        ****    while(DHT_Read()==1); 
+ 112              		.loc 1 51 0 discriminator 1
+ 113 005a FFF7FEFF 		bl	DHT_Read
+ 114              	.LVL13:
+ 115 005e 0128     		cmp	r0, #1
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 4
+
+
+ 116 0060 FBD0     		beq	.L9
+ 117 0062 4FF00008 		mov	r8, #0
+ 118 0066 0F26     		movs	r6, #15
+ 119 0068 4746     		mov	r7, r8
+ 120 006a 24E0     		b	.L10
+ 121              	.LVL14:
+ 122              	.L11:
+  52:main.c        ****    for (i=0; i<40; i++) 
+  53:main.c        **** 	{ 
+  54:main.c        ****        timeout=0; 
+  55:main.c        ****        while(DHT_Read()==0); 
+ 123              		.loc 1 55 0 discriminator 1
+ 124 006c FFF7FEFF 		bl	DHT_Read
+ 125              	.LVL15:
+ 126 0070 0028     		cmp	r0, #0
+ 127 0072 FBD0     		beq	.L11
+ 128 0074 0024     		movs	r4, #0
+ 129 0076 00E0     		b	.L12
+ 130              	.LVL16:
+ 131              	.L13:
+  56:main.c        ****        while(DHT_Read()==1) 
+  57:main.c        ****            timeout++; 
+ 132              		.loc 1 57 0
+ 133 0078 0134     		adds	r4, r4, #1
+ 134              	.LVL17:
+ 135              	.L12:
+  56:main.c        ****        while(DHT_Read()==1) 
+ 136              		.loc 1 56 0
+ 137 007a FFF7FEFF 		bl	DHT_Read
+ 138              	.LVL18:
+ 139 007e 0128     		cmp	r0, #1
+ 140 0080 FAD0     		beq	.L13
+  58:main.c        ****        //Data acquiring point 
+  59:main.c        ****        if ((timeout) > (calc/2)) 
+ 141              		.loc 1 59 0
+ 142 0082 05EBD573 		add	r3, r5, r5, lsr #31
+ 143 0086 B4EB630F 		cmp	r4, r3, asr #1
+ 144 008a 0ADD     		ble	.L14
+  60:main.c        ****            bits[idx] |= (1 << cnt); 
+ 145              		.loc 1 60 0
+ 146 008c 0123     		movs	r3, #1
+ 147 008e 03FA06F2 		lsl	r2, r3, r6
+ 148 0092 02AB     		add	r3, sp, #8
+ 149 0094 03EB4801 		add	r1, r3, r8, lsl #1
+ 150 0098 31F8043C 		ldrh	r3, [r1, #-4]
+ 151 009c 1343     		orrs	r3, r3, r2
+ 152 009e 21F8043C 		strh	r3, [r1, #-4]	@ movhi
+ 153              	.L14:
+  61:main.c        ****        if (cnt == 0)   // next byte? 
+ 154              		.loc 1 61 0
+ 155 00a2 2EB9     		cbnz	r6, .L15
+ 156              	.LVL19:
+  62:main.c        ****    	{ 
+  63:main.c        ****    		cnt = 15;    // restart at MSB 
+  64:main.c        ****    		idx++;      // next byte! 
+ 157              		.loc 1 64 0
+ 158 00a4 08F10108 		add	r8, r8, #1
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 5
+
+
+ 159              	.LVL20:
+ 160 00a8 1FFA88F8 		uxth	r8, r8
+ 161              	.LVL21:
+  63:main.c        ****    		idx++;      // next byte! 
+ 162              		.loc 1 63 0
+ 163 00ac 0F26     		movs	r6, #15
+ 164 00ae 01E0     		b	.L16
+ 165              	.LVL22:
+ 166              	.L15:
+  65:main.c        ****    	} 
+  66:main.c        ****    	else cnt--; 
+ 167              		.loc 1 66 0
+ 168 00b0 013E     		subs	r6, r6, #1
+ 169              	.LVL23:
+ 170 00b2 B6B2     		uxth	r6, r6
+ 171              	.LVL24:
+ 172              	.L16:
+  52:main.c        **** 	{ 
+ 173              		.loc 1 52 0 discriminator 2
+ 174 00b4 0137     		adds	r7, r7, #1
+ 175              	.LVL25:
+ 176              	.L10:
+  52:main.c        **** 	{ 
+ 177              		.loc 1 52 0 is_stmt 0 discriminator 1
+ 178 00b6 272F     		cmp	r7, #39
+ 179 00b8 D8DD     		ble	.L11
+  67:main.c        ****    } 
+  68:main.c        ****    humidity    = bits[0];  
+ 180              		.loc 1 68 0 is_stmt 1
+ 181 00ba 0F4C     		ldr	r4, .L19
+ 182 00bc BDF80400 		ldrh	r0, [sp, #4]
+ 183 00c0 FFF7FEFF 		bl	__aeabi_ui2f
+ 184              	.LVL26:
+ 185 00c4 2060     		str	r0, [r4]	@ float
+  69:main.c        ****    temperature = bits[1];
+ 186              		.loc 1 69 0
+ 187 00c6 BDF80600 		ldrh	r0, [sp, #6]
+ 188 00ca FFF7FEFF 		bl	__aeabi_ui2f
+ 189              	.LVL27:
+ 190 00ce 6060     		str	r0, [r4, #4]	@ float
+  70:main.c        **** 
+  71:main.c        ****    CyExitCriticalSection(IState); 
+ 191              		.loc 1 71 0
+ 192 00d0 4846     		mov	r0, r9
+ 193 00d2 FFF7FEFF 		bl	CyExitCriticalSection
+ 194              	.LVL28:
+  72:main.c        ****    CyDelay(1); 
+ 195              		.loc 1 72 0
+ 196 00d6 0120     		movs	r0, #1
+ 197 00d8 FFF7FEFF 		bl	CyDelay
+ 198              	.LVL29:
+  73:main.c        ****    return 0; 
+ 199              		.loc 1 73 0
+ 200 00dc 0020     		movs	r0, #0
+ 201 00de 07E0     		b	.L17
+ 202              	.LVL30:
+ 203              	.L5:
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 6
+
+
+  74:main.c        ****    r99:    //Goto label for error in DHT reading 
+  75:main.c        ****        humidity    = 99;  
+ 204              		.loc 1 75 0
+ 205 00e0 054B     		ldr	r3, .L19
+ 206 00e2 064A     		ldr	r2, .L19+4
+ 207 00e4 1A60     		str	r2, [r3]	@ float
+  76:main.c        ****        temperature = 99;  
+ 208              		.loc 1 76 0
+ 209 00e6 5A60     		str	r2, [r3, #4]	@ float
+  77:main.c        ****        CyExitCriticalSection(IState); 
+ 210              		.loc 1 77 0
+ 211 00e8 4846     		mov	r0, r9
+ 212 00ea FFF7FEFF 		bl	CyExitCriticalSection
+ 213              	.LVL31:
+  78:main.c        ****        return 99; 
+ 214              		.loc 1 78 0
+ 215 00ee 6320     		movs	r0, #99
+ 216              	.LVL32:
+ 217              	.L17:
+  79:main.c        **** }
+ 218              		.loc 1 79 0
+ 219 00f0 03B0     		add	sp, sp, #12
+ 220              		.cfi_def_cfa_offset 28
+ 221              		@ sp needed
+ 222 00f2 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 223              	.LVL33:
+ 224              	.L20:
+ 225 00f6 00BF     		.align	2
+ 226              	.L19:
+ 227 00f8 00000000 		.word	.LANCHOR0
+ 228 00fc 0000C642 		.word	1120272384
+ 229              		.cfi_endproc
+ 230              	.LFE64:
+ 231              		.size	DHTread, .-DHTread
+ 232              		.global	__aeabi_fdiv
+ 233              		.global	__aeabi_f2d
+ 234              		.section	.text.main,"ax",%progbits
+ 235              		.align	2
+ 236              		.global	main
+ 237              		.thumb
+ 238              		.thumb_func
+ 239              		.type	main, %function
+ 240              	main:
+ 241              	.LFB65:
+  80:main.c        **** int main(void)
+  81:main.c        **** {
+ 242              		.loc 1 81 0
+ 243              		.cfi_startproc
+ 244              		@ args = 0, pretend = 0, frame = 40
+ 245              		@ frame_needed = 0, uses_anonymous_args = 0
+ 246 0000 70B5     		push	{r4, r5, r6, lr}
+ 247              		.cfi_def_cfa_offset 16
+ 248              		.cfi_offset 4, -16
+ 249              		.cfi_offset 5, -12
+ 250              		.cfi_offset 6, -8
+ 251              		.cfi_offset 14, -4
+ 252 0002 8CB0     		sub	sp, sp, #48
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 7
+
+
+ 253              		.cfi_def_cfa_offset 64
+  82:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 254              		.loc 1 82 0
+ 255              		.syntax unified
+ 256              	@ 82 "main.c" 1
+ 257 0004 62B6     		CPSIE   i
+ 258              	@ 0 "" 2
+  83:main.c        ****     
+  84:main.c        ****     char outputstring[40];
+  85:main.c        ****     UART_Start();
+ 259              		.loc 1 85 0
+ 260              		.thumb
+ 261              		.syntax unified
+ 262 0006 FFF7FEFF 		bl	UART_Start
+ 263              	.LVL34:
+ 264              	.L22:
+  86:main.c        ****     
+  87:main.c        ****     for(;;)
+  88:main.c        ****     {
+  89:main.c        ****         DHTread();
+ 265              		.loc 1 89 0 discriminator 1
+ 266 000a FFF7FEFF 		bl	DHTread
+ 267              	.LVL35:
+  90:main.c        ****         sprintf(outputstring,"Temperatura= %.2f°C Humedad= %.2f \r\n",temperature/10,humidity/10);
+ 268              		.loc 1 90 0 discriminator 1
+ 269 000e 114C     		ldr	r4, .L24
+ 270 0010 1149     		ldr	r1, .L24+4
+ 271 0012 6068     		ldr	r0, [r4, #4]	@ float
+ 272 0014 FFF7FEFF 		bl	__aeabi_fdiv
+ 273              	.LVL36:
+ 274 0018 0546     		mov	r5, r0
+ 275 001a 0F49     		ldr	r1, .L24+4
+ 276 001c 2068     		ldr	r0, [r4]	@ float
+ 277 001e FFF7FEFF 		bl	__aeabi_fdiv
+ 278              	.LVL37:
+ 279 0022 0646     		mov	r6, r0
+ 280 0024 2846     		mov	r0, r5
+ 281 0026 FFF7FEFF 		bl	__aeabi_f2d
+ 282              	.LVL38:
+ 283 002a 0446     		mov	r4, r0
+ 284 002c 0D46     		mov	r5, r1
+ 285 002e 3046     		mov	r0, r6
+ 286 0030 FFF7FEFF 		bl	__aeabi_f2d
+ 287              	.LVL39:
+ 288 0034 CDE90001 		strd	r0, [sp]
+ 289 0038 2246     		mov	r2, r4
+ 290 003a 2B46     		mov	r3, r5
+ 291 003c 0749     		ldr	r1, .L24+8
+ 292 003e 02A8     		add	r0, sp, #8
+ 293 0040 FFF7FEFF 		bl	sprintf
+ 294              	.LVL40:
+  91:main.c        ****         UART_PutString(outputstring);
+ 295              		.loc 1 91 0 discriminator 1
+ 296 0044 02A8     		add	r0, sp, #8
+ 297 0046 FFF7FEFF 		bl	UART_PutString
+ 298              	.LVL41:
+  92:main.c        ****         CyDelay(1000);  //Delay in milli seconds.        
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 8
+
+
+ 299              		.loc 1 92 0 discriminator 1
+ 300 004a 4FF47A70 		mov	r0, #1000
+ 301 004e FFF7FEFF 		bl	CyDelay
+ 302              	.LVL42:
+ 303 0052 DAE7     		b	.L22
+ 304              	.L25:
+ 305              		.align	2
+ 306              	.L24:
+ 307 0054 00000000 		.word	.LANCHOR0
+ 308 0058 00002041 		.word	1092616192
+ 309 005c 00000000 		.word	.LC0
+ 310              		.cfi_endproc
+ 311              	.LFE65:
+ 312              		.size	main, .-main
+ 313              		.data
+ 314              		.align	2
+ 315              		.set	.LANCHOR0,. + 0
+ 316              		.type	humidity, %object
+ 317              		.size	humidity, 4
+ 318              	humidity:
+ 319 0000 0000C642 		.word	1120272384
+ 320              		.type	temperature, %object
+ 321              		.size	temperature, 4
+ 322              	temperature:
+ 323 0004 0000C642 		.word	1120272384
+ 324              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 325              		.align	2
+ 326              	.LC0:
+ 327 0000 54656D70 		.ascii	"Temperatura= %.2f\302\260C Humedad= %.2f \015\012\000"
+ 327      65726174 
+ 327      7572613D 
+ 327      20252E32 
+ 327      66C2B043 
+ 328              		.text
+ 329              	.Letext0:
+ 330              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 331              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 332              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 333              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
+ 334              		.file 6 "Generated_Source\\PSoC5/DHT.h"
+ 335              		.file 7 "Generated_Source\\PSoC5/UART.h"
+ 336              		.file 8 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 337              		.file 9 "Generated_Source\\PSoC5/core_cm3.h"
+ 338              		.section	.debug_info,"",%progbits
+ 339              	.Ldebug_info0:
+ 340 0000 02030000 		.4byte	0x302
+ 341 0004 0400     		.2byte	0x4
+ 342 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 343 000a 04       		.byte	0x4
+ 344 000b 01       		.uleb128 0x1
+ 345 000c 5A000000 		.4byte	.LASF32
+ 346 0010 0C       		.byte	0xc
+ 347 0011 CE010000 		.4byte	.LASF33
+ 348 0015 7B010000 		.4byte	.LASF34
+ 349 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 350 001d 00000000 		.4byte	0
+ 351 0021 00000000 		.4byte	.Ldebug_line0
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 9
+
+
+ 352 0025 02       		.uleb128 0x2
+ 353 0026 01       		.byte	0x1
+ 354 0027 06       		.byte	0x6
+ 355 0028 26020000 		.4byte	.LASF0
+ 356 002c 02       		.uleb128 0x2
+ 357 002d 01       		.byte	0x1
+ 358 002e 08       		.byte	0x8
+ 359 002f 4C000000 		.4byte	.LASF1
+ 360 0033 02       		.uleb128 0x2
+ 361 0034 02       		.byte	0x2
+ 362 0035 05       		.byte	0x5
+ 363 0036 DF010000 		.4byte	.LASF2
+ 364 003a 02       		.uleb128 0x2
+ 365 003b 02       		.byte	0x2
+ 366 003c 07       		.byte	0x7
+ 367 003d FA000000 		.4byte	.LASF3
+ 368 0041 03       		.uleb128 0x3
+ 369 0042 25000000 		.4byte	.LASF9
+ 370 0046 02       		.byte	0x2
+ 371 0047 3F       		.byte	0x3f
+ 372 0048 4C000000 		.4byte	0x4c
+ 373 004c 02       		.uleb128 0x2
+ 374 004d 04       		.byte	0x4
+ 375 004e 05       		.byte	0x5
+ 376 004f 11020000 		.4byte	.LASF4
+ 377 0053 02       		.uleb128 0x2
+ 378 0054 04       		.byte	0x4
+ 379 0055 07       		.byte	0x7
+ 380 0056 E8000000 		.4byte	.LASF5
+ 381 005a 02       		.uleb128 0x2
+ 382 005b 08       		.byte	0x8
+ 383 005c 05       		.byte	0x5
+ 384 005d 00000000 		.4byte	.LASF6
+ 385 0061 02       		.uleb128 0x2
+ 386 0062 08       		.byte	0x8
+ 387 0063 07       		.byte	0x7
+ 388 0064 45010000 		.4byte	.LASF7
+ 389 0068 04       		.uleb128 0x4
+ 390 0069 04       		.byte	0x4
+ 391 006a 05       		.byte	0x5
+ 392 006b 696E7400 		.ascii	"int\000"
+ 393 006f 02       		.uleb128 0x2
+ 394 0070 04       		.byte	0x4
+ 395 0071 07       		.byte	0x7
+ 396 0072 38010000 		.4byte	.LASF8
+ 397 0076 03       		.uleb128 0x3
+ 398 0077 38000000 		.4byte	.LASF10
+ 399 007b 03       		.byte	0x3
+ 400 007c 2C       		.byte	0x2c
+ 401 007d 41000000 		.4byte	0x41
+ 402 0081 05       		.uleb128 0x5
+ 403 0082 31010000 		.4byte	.LASF11
+ 404 0086 04       		.byte	0x4
+ 405 0087 E901     		.2byte	0x1e9
+ 406 0089 3A000000 		.4byte	0x3a
+ 407 008d 02       		.uleb128 0x2
+ 408 008e 04       		.byte	0x4
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 10
+
+
+ 409 008f 04       		.byte	0x4
+ 410 0090 17000000 		.4byte	.LASF12
+ 411 0094 02       		.uleb128 0x2
+ 412 0095 08       		.byte	0x8
+ 413 0096 04       		.byte	0x4
+ 414 0097 25010000 		.4byte	.LASF13
+ 415 009b 02       		.uleb128 0x2
+ 416 009c 01       		.byte	0x1
+ 417 009d 08       		.byte	0x8
+ 418 009e D5010000 		.4byte	.LASF14
+ 419 00a2 02       		.uleb128 0x2
+ 420 00a3 08       		.byte	0x8
+ 421 00a4 04       		.byte	0x4
+ 422 00a5 1A020000 		.4byte	.LASF15
+ 423 00a9 02       		.uleb128 0x2
+ 424 00aa 04       		.byte	0x4
+ 425 00ab 07       		.byte	0x7
+ 426 00ac BE010000 		.4byte	.LASF16
+ 427 00b0 06       		.uleb128 0x6
+ 428 00b1 73010000 		.4byte	.LASF35
+ 429 00b5 01       		.byte	0x1
+ 430 00b6 13       		.byte	0x13
+ 431 00b7 68000000 		.4byte	0x68
+ 432 00bb 00000000 		.4byte	.LFB64
+ 433 00bf 00010000 		.4byte	.LFE64-.LFB64
+ 434 00c3 01       		.uleb128 0x1
+ 435 00c4 9C       		.byte	0x9c
+ 436 00c5 DE010000 		.4byte	0x1de
+ 437 00c9 07       		.uleb128 0x7
+ 438 00ca 6900     		.ascii	"i\000"
+ 439 00cc 01       		.byte	0x1
+ 440 00cd 15       		.byte	0x15
+ 441 00ce 68000000 		.4byte	0x68
+ 442 00d2 00000000 		.4byte	.LLST0
+ 443 00d6 08       		.uleb128 0x8
+ 444 00d7 C7010000 		.4byte	.LASF17
+ 445 00db 01       		.byte	0x1
+ 446 00dc 16       		.byte	0x16
+ 447 00dd 81000000 		.4byte	0x81
+ 448 00e1 2A000000 		.4byte	.LLST1
+ 449 00e5 09       		.uleb128 0x9
+ 450 00e6 DA010000 		.4byte	.LASF18
+ 451 00ea 01       		.byte	0x1
+ 452 00eb 18       		.byte	0x18
+ 453 00ec DE010000 		.4byte	0x1de
+ 454 00f0 02       		.uleb128 0x2
+ 455 00f1 91       		.byte	0x91
+ 456 00f2 5C       		.sleb128 -36
+ 457 00f3 07       		.uleb128 0x7
+ 458 00f4 636E7400 		.ascii	"cnt\000"
+ 459 00f8 01       		.byte	0x1
+ 460 00f9 19       		.byte	0x19
+ 461 00fa 81000000 		.4byte	0x81
+ 462 00fe 42000000 		.4byte	.LLST2
+ 463 0102 07       		.uleb128 0x7
+ 464 0103 69647800 		.ascii	"idx\000"
+ 465 0107 01       		.byte	0x1
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 11
+
+
+ 466 0108 1A       		.byte	0x1a
+ 467 0109 81000000 		.4byte	0x81
+ 468 010d 8F000000 		.4byte	.LLST3
+ 469 0111 0A       		.uleb128 0xa
+ 470 0112 0C020000 		.4byte	.LASF19
+ 471 0116 01       		.byte	0x1
+ 472 0117 1B       		.byte	0x1b
+ 473 0118 68000000 		.4byte	0x68
+ 474 011c 00       		.byte	0
+ 475 011d 08       		.uleb128 0x8
+ 476 011e 1D000000 		.4byte	.LASF20
+ 477 0122 01       		.byte	0x1
+ 478 0123 1C       		.byte	0x1c
+ 479 0124 68000000 		.4byte	0x68
+ 480 0128 C5000000 		.4byte	.LLST4
+ 481 012c 0B       		.uleb128 0xb
+ 482 012d 72393900 		.ascii	"r99\000"
+ 483 0131 01       		.byte	0x1
+ 484 0132 4A       		.byte	0x4a
+ 485 0133 E0000000 		.4byte	.L5
+ 486 0137 0C       		.uleb128 0xc
+ 487 0138 0A000000 		.4byte	.LVL0
+ 488 013c AD020000 		.4byte	0x2ad
+ 489 0140 0D       		.uleb128 0xd
+ 490 0141 28000000 		.4byte	.LVL4
+ 491 0145 B8020000 		.4byte	0x2b8
+ 492 0149 53010000 		.4byte	0x153
+ 493 014d 0E       		.uleb128 0xe
+ 494 014e 01       		.uleb128 0x1
+ 495 014f 50       		.byte	0x50
+ 496 0150 01       		.uleb128 0x1
+ 497 0151 30       		.byte	0x30
+ 498 0152 00       		.byte	0
+ 499 0153 0D       		.uleb128 0xd
+ 500 0154 2E000000 		.4byte	.LVL5
+ 501 0158 C3020000 		.4byte	0x2c3
+ 502 015c 66010000 		.4byte	0x166
+ 503 0160 0E       		.uleb128 0xe
+ 504 0161 01       		.uleb128 0x1
+ 505 0162 50       		.byte	0x50
+ 506 0163 01       		.uleb128 0x1
+ 507 0164 43       		.byte	0x43
+ 508 0165 00       		.byte	0
+ 509 0166 0D       		.uleb128 0xd
+ 510 0167 34000000 		.4byte	.LVL6
+ 511 016b B8020000 		.4byte	0x2b8
+ 512 016f 79010000 		.4byte	0x179
+ 513 0173 0E       		.uleb128 0xe
+ 514 0174 01       		.uleb128 0x1
+ 515 0175 50       		.byte	0x50
+ 516 0176 01       		.uleb128 0x1
+ 517 0177 31       		.byte	0x31
+ 518 0178 00       		.byte	0
+ 519 0179 0C       		.uleb128 0xc
+ 520 017a 44000000 		.4byte	.LVL10
+ 521 017e CE020000 		.4byte	0x2ce
+ 522 0182 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 12
+
+
+ 523 0183 56000000 		.4byte	.LVL12
+ 524 0187 CE020000 		.4byte	0x2ce
+ 525 018b 0C       		.uleb128 0xc
+ 526 018c 5E000000 		.4byte	.LVL13
+ 527 0190 CE020000 		.4byte	0x2ce
+ 528 0194 0C       		.uleb128 0xc
+ 529 0195 70000000 		.4byte	.LVL15
+ 530 0199 CE020000 		.4byte	0x2ce
+ 531 019d 0C       		.uleb128 0xc
+ 532 019e 7E000000 		.4byte	.LVL18
+ 533 01a2 CE020000 		.4byte	0x2ce
+ 534 01a6 0D       		.uleb128 0xd
+ 535 01a7 D6000000 		.4byte	.LVL28
+ 536 01ab D9020000 		.4byte	0x2d9
+ 537 01af BA010000 		.4byte	0x1ba
+ 538 01b3 0E       		.uleb128 0xe
+ 539 01b4 01       		.uleb128 0x1
+ 540 01b5 50       		.byte	0x50
+ 541 01b6 02       		.uleb128 0x2
+ 542 01b7 79       		.byte	0x79
+ 543 01b8 00       		.sleb128 0
+ 544 01b9 00       		.byte	0
+ 545 01ba 0D       		.uleb128 0xd
+ 546 01bb DC000000 		.4byte	.LVL29
+ 547 01bf C3020000 		.4byte	0x2c3
+ 548 01c3 CD010000 		.4byte	0x1cd
+ 549 01c7 0E       		.uleb128 0xe
+ 550 01c8 01       		.uleb128 0x1
+ 551 01c9 50       		.byte	0x50
+ 552 01ca 01       		.uleb128 0x1
+ 553 01cb 31       		.byte	0x31
+ 554 01cc 00       		.byte	0
+ 555 01cd 0F       		.uleb128 0xf
+ 556 01ce EE000000 		.4byte	.LVL31
+ 557 01d2 D9020000 		.4byte	0x2d9
+ 558 01d6 0E       		.uleb128 0xe
+ 559 01d7 01       		.uleb128 0x1
+ 560 01d8 50       		.byte	0x50
+ 561 01d9 02       		.uleb128 0x2
+ 562 01da 79       		.byte	0x79
+ 563 01db 00       		.sleb128 0
+ 564 01dc 00       		.byte	0
+ 565 01dd 00       		.byte	0
+ 566 01de 10       		.uleb128 0x10
+ 567 01df 81000000 		.4byte	0x81
+ 568 01e3 EE010000 		.4byte	0x1ee
+ 569 01e7 11       		.uleb128 0x11
+ 570 01e8 A9000000 		.4byte	0xa9
+ 571 01ec 01       		.byte	0x1
+ 572 01ed 00       		.byte	0
+ 573 01ee 12       		.uleb128 0x12
+ 574 01ef 2C010000 		.4byte	.LASF36
+ 575 01f3 01       		.byte	0x1
+ 576 01f4 50       		.byte	0x50
+ 577 01f5 68000000 		.4byte	0x68
+ 578 01f9 00000000 		.4byte	.LFB65
+ 579 01fd 60000000 		.4byte	.LFE65-.LFB65
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 13
+
+
+ 580 0201 01       		.uleb128 0x1
+ 581 0202 9C       		.byte	0x9c
+ 582 0203 6A020000 		.4byte	0x26a
+ 583 0207 09       		.uleb128 0x9
+ 584 0208 E9010000 		.4byte	.LASF21
+ 585 020c 01       		.byte	0x1
+ 586 020d 54       		.byte	0x54
+ 587 020e 6A020000 		.4byte	0x26a
+ 588 0212 02       		.uleb128 0x2
+ 589 0213 91       		.byte	0x91
+ 590 0214 48       		.sleb128 -56
+ 591 0215 0C       		.uleb128 0xc
+ 592 0216 0A000000 		.4byte	.LVL34
+ 593 021a E4020000 		.4byte	0x2e4
+ 594 021e 0C       		.uleb128 0xc
+ 595 021f 0E000000 		.4byte	.LVL35
+ 596 0223 B0000000 		.4byte	0xb0
+ 597 0227 0D       		.uleb128 0xd
+ 598 0228 44000000 		.4byte	.LVL40
+ 599 022c EF020000 		.4byte	0x2ef
+ 600 0230 44020000 		.4byte	0x244
+ 601 0234 0E       		.uleb128 0xe
+ 602 0235 01       		.uleb128 0x1
+ 603 0236 50       		.byte	0x50
+ 604 0237 02       		.uleb128 0x2
+ 605 0238 91       		.byte	0x91
+ 606 0239 48       		.sleb128 -56
+ 607 023a 0E       		.uleb128 0xe
+ 608 023b 01       		.uleb128 0x1
+ 609 023c 51       		.byte	0x51
+ 610 023d 05       		.uleb128 0x5
+ 611 023e 03       		.byte	0x3
+ 612 023f 00000000 		.4byte	.LC0
+ 613 0243 00       		.byte	0
+ 614 0244 0D       		.uleb128 0xd
+ 615 0245 4A000000 		.4byte	.LVL41
+ 616 0249 FA020000 		.4byte	0x2fa
+ 617 024d 58020000 		.4byte	0x258
+ 618 0251 0E       		.uleb128 0xe
+ 619 0252 01       		.uleb128 0x1
+ 620 0253 50       		.byte	0x50
+ 621 0254 02       		.uleb128 0x2
+ 622 0255 91       		.byte	0x91
+ 623 0256 48       		.sleb128 -56
+ 624 0257 00       		.byte	0
+ 625 0258 0F       		.uleb128 0xf
+ 626 0259 52000000 		.4byte	.LVL42
+ 627 025d C3020000 		.4byte	0x2c3
+ 628 0261 0E       		.uleb128 0xe
+ 629 0262 01       		.uleb128 0x1
+ 630 0263 50       		.byte	0x50
+ 631 0264 03       		.uleb128 0x3
+ 632 0265 0A       		.byte	0xa
+ 633 0266 E803     		.2byte	0x3e8
+ 634 0268 00       		.byte	0
+ 635 0269 00       		.byte	0
+ 636 026a 10       		.uleb128 0x10
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 14
+
+
+ 637 026b 9B000000 		.4byte	0x9b
+ 638 026f 7A020000 		.4byte	0x27a
+ 639 0273 11       		.uleb128 0x11
+ 640 0274 A9000000 		.4byte	0xa9
+ 641 0278 27       		.byte	0x27
+ 642 0279 00       		.byte	0
+ 643 027a 09       		.uleb128 0x9
+ 644 027b 40000000 		.4byte	.LASF22
+ 645 027f 01       		.byte	0x1
+ 646 0280 0F       		.byte	0xf
+ 647 0281 8D000000 		.4byte	0x8d
+ 648 0285 05       		.uleb128 0x5
+ 649 0286 03       		.byte	0x3
+ 650 0287 04000000 		.4byte	temperature
+ 651 028b 09       		.uleb128 0x9
+ 652 028c 0E000000 		.4byte	.LASF23
+ 653 0290 01       		.byte	0x1
+ 654 0291 10       		.byte	0x10
+ 655 0292 8D000000 		.4byte	0x8d
+ 656 0296 05       		.uleb128 0x5
+ 657 0297 03       		.byte	0x3
+ 658 0298 00000000 		.4byte	humidity
+ 659 029c 13       		.uleb128 0x13
+ 660 029d 18010000 		.4byte	.LASF37
+ 661 02a1 09       		.byte	0x9
+ 662 02a2 1207     		.2byte	0x712
+ 663 02a4 A8020000 		.4byte	0x2a8
+ 664 02a8 14       		.uleb128 0x14
+ 665 02a9 76000000 		.4byte	0x76
+ 666 02ad 15       		.uleb128 0x15
+ 667 02ae 5C010000 		.4byte	.LASF24
+ 668 02b2 5C010000 		.4byte	.LASF24
+ 669 02b6 05       		.byte	0x5
+ 670 02b7 7D       		.byte	0x7d
+ 671 02b8 15       		.uleb128 0x15
+ 672 02b9 41020000 		.4byte	.LASF25
+ 673 02bd 41020000 		.4byte	.LASF25
+ 674 02c1 06       		.byte	0x6
+ 675 02c2 26       		.byte	0x26
+ 676 02c3 15       		.uleb128 0x15
+ 677 02c4 53020000 		.4byte	.LASF26
+ 678 02c8 53020000 		.4byte	.LASF26
+ 679 02cc 05       		.byte	0x5
+ 680 02cd 76       		.byte	0x76
+ 681 02ce 15       		.uleb128 0x15
+ 682 02cf 2F000000 		.4byte	.LASF27
+ 683 02d3 2F000000 		.4byte	.LASF27
+ 684 02d7 06       		.byte	0x6
+ 685 02d8 29       		.byte	0x29
+ 686 02d9 15       		.uleb128 0x15
+ 687 02da F6010000 		.4byte	.LASF28
+ 688 02de F6010000 		.4byte	.LASF28
+ 689 02e2 05       		.byte	0x5
+ 690 02e3 7E       		.byte	0x7e
+ 691 02e4 15       		.uleb128 0x15
+ 692 02e5 0D010000 		.4byte	.LASF29
+ 693 02e9 0D010000 		.4byte	.LASF29
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 15
+
+
+ 694 02ed 07       		.byte	0x7
+ 695 02ee 54       		.byte	0x54
+ 696 02ef 15       		.uleb128 0x15
+ 697 02f0 4B020000 		.4byte	.LASF30
+ 698 02f4 4B020000 		.4byte	.LASF30
+ 699 02f8 08       		.byte	0x8
+ 700 02f9 E7       		.byte	0xe7
+ 701 02fa 15       		.uleb128 0x15
+ 702 02fb 32020000 		.4byte	.LASF31
+ 703 02ff 32020000 		.4byte	.LASF31
+ 704 0303 07       		.byte	0x7
+ 705 0304 8B       		.byte	0x8b
+ 706 0305 00       		.byte	0
+ 707              		.section	.debug_abbrev,"",%progbits
+ 708              	.Ldebug_abbrev0:
+ 709 0000 01       		.uleb128 0x1
+ 710 0001 11       		.uleb128 0x11
+ 711 0002 01       		.byte	0x1
+ 712 0003 25       		.uleb128 0x25
+ 713 0004 0E       		.uleb128 0xe
+ 714 0005 13       		.uleb128 0x13
+ 715 0006 0B       		.uleb128 0xb
+ 716 0007 03       		.uleb128 0x3
+ 717 0008 0E       		.uleb128 0xe
+ 718 0009 1B       		.uleb128 0x1b
+ 719 000a 0E       		.uleb128 0xe
+ 720 000b 55       		.uleb128 0x55
+ 721 000c 17       		.uleb128 0x17
+ 722 000d 11       		.uleb128 0x11
+ 723 000e 01       		.uleb128 0x1
+ 724 000f 10       		.uleb128 0x10
+ 725 0010 17       		.uleb128 0x17
+ 726 0011 00       		.byte	0
+ 727 0012 00       		.byte	0
+ 728 0013 02       		.uleb128 0x2
+ 729 0014 24       		.uleb128 0x24
+ 730 0015 00       		.byte	0
+ 731 0016 0B       		.uleb128 0xb
+ 732 0017 0B       		.uleb128 0xb
+ 733 0018 3E       		.uleb128 0x3e
+ 734 0019 0B       		.uleb128 0xb
+ 735 001a 03       		.uleb128 0x3
+ 736 001b 0E       		.uleb128 0xe
+ 737 001c 00       		.byte	0
+ 738 001d 00       		.byte	0
+ 739 001e 03       		.uleb128 0x3
+ 740 001f 16       		.uleb128 0x16
+ 741 0020 00       		.byte	0
+ 742 0021 03       		.uleb128 0x3
+ 743 0022 0E       		.uleb128 0xe
+ 744 0023 3A       		.uleb128 0x3a
+ 745 0024 0B       		.uleb128 0xb
+ 746 0025 3B       		.uleb128 0x3b
+ 747 0026 0B       		.uleb128 0xb
+ 748 0027 49       		.uleb128 0x49
+ 749 0028 13       		.uleb128 0x13
+ 750 0029 00       		.byte	0
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 16
+
+
+ 751 002a 00       		.byte	0
+ 752 002b 04       		.uleb128 0x4
+ 753 002c 24       		.uleb128 0x24
+ 754 002d 00       		.byte	0
+ 755 002e 0B       		.uleb128 0xb
+ 756 002f 0B       		.uleb128 0xb
+ 757 0030 3E       		.uleb128 0x3e
+ 758 0031 0B       		.uleb128 0xb
+ 759 0032 03       		.uleb128 0x3
+ 760 0033 08       		.uleb128 0x8
+ 761 0034 00       		.byte	0
+ 762 0035 00       		.byte	0
+ 763 0036 05       		.uleb128 0x5
+ 764 0037 16       		.uleb128 0x16
+ 765 0038 00       		.byte	0
+ 766 0039 03       		.uleb128 0x3
+ 767 003a 0E       		.uleb128 0xe
+ 768 003b 3A       		.uleb128 0x3a
+ 769 003c 0B       		.uleb128 0xb
+ 770 003d 3B       		.uleb128 0x3b
+ 771 003e 05       		.uleb128 0x5
+ 772 003f 49       		.uleb128 0x49
+ 773 0040 13       		.uleb128 0x13
+ 774 0041 00       		.byte	0
+ 775 0042 00       		.byte	0
+ 776 0043 06       		.uleb128 0x6
+ 777 0044 2E       		.uleb128 0x2e
+ 778 0045 01       		.byte	0x1
+ 779 0046 3F       		.uleb128 0x3f
+ 780 0047 19       		.uleb128 0x19
+ 781 0048 03       		.uleb128 0x3
+ 782 0049 0E       		.uleb128 0xe
+ 783 004a 3A       		.uleb128 0x3a
+ 784 004b 0B       		.uleb128 0xb
+ 785 004c 3B       		.uleb128 0x3b
+ 786 004d 0B       		.uleb128 0xb
+ 787 004e 49       		.uleb128 0x49
+ 788 004f 13       		.uleb128 0x13
+ 789 0050 11       		.uleb128 0x11
+ 790 0051 01       		.uleb128 0x1
+ 791 0052 12       		.uleb128 0x12
+ 792 0053 06       		.uleb128 0x6
+ 793 0054 40       		.uleb128 0x40
+ 794 0055 18       		.uleb128 0x18
+ 795 0056 9642     		.uleb128 0x2116
+ 796 0058 19       		.uleb128 0x19
+ 797 0059 01       		.uleb128 0x1
+ 798 005a 13       		.uleb128 0x13
+ 799 005b 00       		.byte	0
+ 800 005c 00       		.byte	0
+ 801 005d 07       		.uleb128 0x7
+ 802 005e 34       		.uleb128 0x34
+ 803 005f 00       		.byte	0
+ 804 0060 03       		.uleb128 0x3
+ 805 0061 08       		.uleb128 0x8
+ 806 0062 3A       		.uleb128 0x3a
+ 807 0063 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 17
+
+
+ 808 0064 3B       		.uleb128 0x3b
+ 809 0065 0B       		.uleb128 0xb
+ 810 0066 49       		.uleb128 0x49
+ 811 0067 13       		.uleb128 0x13
+ 812 0068 02       		.uleb128 0x2
+ 813 0069 17       		.uleb128 0x17
+ 814 006a 00       		.byte	0
+ 815 006b 00       		.byte	0
+ 816 006c 08       		.uleb128 0x8
+ 817 006d 34       		.uleb128 0x34
+ 818 006e 00       		.byte	0
+ 819 006f 03       		.uleb128 0x3
+ 820 0070 0E       		.uleb128 0xe
+ 821 0071 3A       		.uleb128 0x3a
+ 822 0072 0B       		.uleb128 0xb
+ 823 0073 3B       		.uleb128 0x3b
+ 824 0074 0B       		.uleb128 0xb
+ 825 0075 49       		.uleb128 0x49
+ 826 0076 13       		.uleb128 0x13
+ 827 0077 02       		.uleb128 0x2
+ 828 0078 17       		.uleb128 0x17
+ 829 0079 00       		.byte	0
+ 830 007a 00       		.byte	0
+ 831 007b 09       		.uleb128 0x9
+ 832 007c 34       		.uleb128 0x34
+ 833 007d 00       		.byte	0
+ 834 007e 03       		.uleb128 0x3
+ 835 007f 0E       		.uleb128 0xe
+ 836 0080 3A       		.uleb128 0x3a
+ 837 0081 0B       		.uleb128 0xb
+ 838 0082 3B       		.uleb128 0x3b
+ 839 0083 0B       		.uleb128 0xb
+ 840 0084 49       		.uleb128 0x49
+ 841 0085 13       		.uleb128 0x13
+ 842 0086 02       		.uleb128 0x2
+ 843 0087 18       		.uleb128 0x18
+ 844 0088 00       		.byte	0
+ 845 0089 00       		.byte	0
+ 846 008a 0A       		.uleb128 0xa
+ 847 008b 34       		.uleb128 0x34
+ 848 008c 00       		.byte	0
+ 849 008d 03       		.uleb128 0x3
+ 850 008e 0E       		.uleb128 0xe
+ 851 008f 3A       		.uleb128 0x3a
+ 852 0090 0B       		.uleb128 0xb
+ 853 0091 3B       		.uleb128 0x3b
+ 854 0092 0B       		.uleb128 0xb
+ 855 0093 49       		.uleb128 0x49
+ 856 0094 13       		.uleb128 0x13
+ 857 0095 1C       		.uleb128 0x1c
+ 858 0096 0B       		.uleb128 0xb
+ 859 0097 00       		.byte	0
+ 860 0098 00       		.byte	0
+ 861 0099 0B       		.uleb128 0xb
+ 862 009a 0A       		.uleb128 0xa
+ 863 009b 00       		.byte	0
+ 864 009c 03       		.uleb128 0x3
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 18
+
+
+ 865 009d 08       		.uleb128 0x8
+ 866 009e 3A       		.uleb128 0x3a
+ 867 009f 0B       		.uleb128 0xb
+ 868 00a0 3B       		.uleb128 0x3b
+ 869 00a1 0B       		.uleb128 0xb
+ 870 00a2 11       		.uleb128 0x11
+ 871 00a3 01       		.uleb128 0x1
+ 872 00a4 00       		.byte	0
+ 873 00a5 00       		.byte	0
+ 874 00a6 0C       		.uleb128 0xc
+ 875 00a7 898201   		.uleb128 0x4109
+ 876 00aa 00       		.byte	0
+ 877 00ab 11       		.uleb128 0x11
+ 878 00ac 01       		.uleb128 0x1
+ 879 00ad 31       		.uleb128 0x31
+ 880 00ae 13       		.uleb128 0x13
+ 881 00af 00       		.byte	0
+ 882 00b0 00       		.byte	0
+ 883 00b1 0D       		.uleb128 0xd
+ 884 00b2 898201   		.uleb128 0x4109
+ 885 00b5 01       		.byte	0x1
+ 886 00b6 11       		.uleb128 0x11
+ 887 00b7 01       		.uleb128 0x1
+ 888 00b8 31       		.uleb128 0x31
+ 889 00b9 13       		.uleb128 0x13
+ 890 00ba 01       		.uleb128 0x1
+ 891 00bb 13       		.uleb128 0x13
+ 892 00bc 00       		.byte	0
+ 893 00bd 00       		.byte	0
+ 894 00be 0E       		.uleb128 0xe
+ 895 00bf 8A8201   		.uleb128 0x410a
+ 896 00c2 00       		.byte	0
+ 897 00c3 02       		.uleb128 0x2
+ 898 00c4 18       		.uleb128 0x18
+ 899 00c5 9142     		.uleb128 0x2111
+ 900 00c7 18       		.uleb128 0x18
+ 901 00c8 00       		.byte	0
+ 902 00c9 00       		.byte	0
+ 903 00ca 0F       		.uleb128 0xf
+ 904 00cb 898201   		.uleb128 0x4109
+ 905 00ce 01       		.byte	0x1
+ 906 00cf 11       		.uleb128 0x11
+ 907 00d0 01       		.uleb128 0x1
+ 908 00d1 31       		.uleb128 0x31
+ 909 00d2 13       		.uleb128 0x13
+ 910 00d3 00       		.byte	0
+ 911 00d4 00       		.byte	0
+ 912 00d5 10       		.uleb128 0x10
+ 913 00d6 01       		.uleb128 0x1
+ 914 00d7 01       		.byte	0x1
+ 915 00d8 49       		.uleb128 0x49
+ 916 00d9 13       		.uleb128 0x13
+ 917 00da 01       		.uleb128 0x1
+ 918 00db 13       		.uleb128 0x13
+ 919 00dc 00       		.byte	0
+ 920 00dd 00       		.byte	0
+ 921 00de 11       		.uleb128 0x11
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 19
+
+
+ 922 00df 21       		.uleb128 0x21
+ 923 00e0 00       		.byte	0
+ 924 00e1 49       		.uleb128 0x49
+ 925 00e2 13       		.uleb128 0x13
+ 926 00e3 2F       		.uleb128 0x2f
+ 927 00e4 0B       		.uleb128 0xb
+ 928 00e5 00       		.byte	0
+ 929 00e6 00       		.byte	0
+ 930 00e7 12       		.uleb128 0x12
+ 931 00e8 2E       		.uleb128 0x2e
+ 932 00e9 01       		.byte	0x1
+ 933 00ea 3F       		.uleb128 0x3f
+ 934 00eb 19       		.uleb128 0x19
+ 935 00ec 03       		.uleb128 0x3
+ 936 00ed 0E       		.uleb128 0xe
+ 937 00ee 3A       		.uleb128 0x3a
+ 938 00ef 0B       		.uleb128 0xb
+ 939 00f0 3B       		.uleb128 0x3b
+ 940 00f1 0B       		.uleb128 0xb
+ 941 00f2 27       		.uleb128 0x27
+ 942 00f3 19       		.uleb128 0x19
+ 943 00f4 49       		.uleb128 0x49
+ 944 00f5 13       		.uleb128 0x13
+ 945 00f6 8701     		.uleb128 0x87
+ 946 00f8 19       		.uleb128 0x19
+ 947 00f9 11       		.uleb128 0x11
+ 948 00fa 01       		.uleb128 0x1
+ 949 00fb 12       		.uleb128 0x12
+ 950 00fc 06       		.uleb128 0x6
+ 951 00fd 40       		.uleb128 0x40
+ 952 00fe 18       		.uleb128 0x18
+ 953 00ff 9642     		.uleb128 0x2116
+ 954 0101 19       		.uleb128 0x19
+ 955 0102 01       		.uleb128 0x1
+ 956 0103 13       		.uleb128 0x13
+ 957 0104 00       		.byte	0
+ 958 0105 00       		.byte	0
+ 959 0106 13       		.uleb128 0x13
+ 960 0107 34       		.uleb128 0x34
+ 961 0108 00       		.byte	0
+ 962 0109 03       		.uleb128 0x3
+ 963 010a 0E       		.uleb128 0xe
+ 964 010b 3A       		.uleb128 0x3a
+ 965 010c 0B       		.uleb128 0xb
+ 966 010d 3B       		.uleb128 0x3b
+ 967 010e 05       		.uleb128 0x5
+ 968 010f 49       		.uleb128 0x49
+ 969 0110 13       		.uleb128 0x13
+ 970 0111 3F       		.uleb128 0x3f
+ 971 0112 19       		.uleb128 0x19
+ 972 0113 3C       		.uleb128 0x3c
+ 973 0114 19       		.uleb128 0x19
+ 974 0115 00       		.byte	0
+ 975 0116 00       		.byte	0
+ 976 0117 14       		.uleb128 0x14
+ 977 0118 35       		.uleb128 0x35
+ 978 0119 00       		.byte	0
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 20
+
+
+ 979 011a 49       		.uleb128 0x49
+ 980 011b 13       		.uleb128 0x13
+ 981 011c 00       		.byte	0
+ 982 011d 00       		.byte	0
+ 983 011e 15       		.uleb128 0x15
+ 984 011f 2E       		.uleb128 0x2e
+ 985 0120 00       		.byte	0
+ 986 0121 3F       		.uleb128 0x3f
+ 987 0122 19       		.uleb128 0x19
+ 988 0123 3C       		.uleb128 0x3c
+ 989 0124 19       		.uleb128 0x19
+ 990 0125 6E       		.uleb128 0x6e
+ 991 0126 0E       		.uleb128 0xe
+ 992 0127 03       		.uleb128 0x3
+ 993 0128 0E       		.uleb128 0xe
+ 994 0129 3A       		.uleb128 0x3a
+ 995 012a 0B       		.uleb128 0xb
+ 996 012b 3B       		.uleb128 0x3b
+ 997 012c 0B       		.uleb128 0xb
+ 998 012d 00       		.byte	0
+ 999 012e 00       		.byte	0
+ 1000 012f 00       		.byte	0
+ 1001              		.section	.debug_loc,"",%progbits
+ 1002              	.Ldebug_loc0:
+ 1003              	.LLST0:
+ 1004 0000 0C000000 		.4byte	.LVL1
+ 1005 0004 10000000 		.4byte	.LVL2
+ 1006 0008 0200     		.2byte	0x2
+ 1007 000a 30       		.byte	0x30
+ 1008 000b 9F       		.byte	0x9f
+ 1009 000c 10000000 		.4byte	.LVL2
+ 1010 0010 27000000 		.4byte	.LVL4-1
+ 1011 0014 0100     		.2byte	0x1
+ 1012 0016 53       		.byte	0x53
+ 1013 0017 6C000000 		.4byte	.LVL14
+ 1014 001b E0000000 		.4byte	.LVL30
+ 1015 001f 0100     		.2byte	0x1
+ 1016 0021 57       		.byte	0x57
+ 1017 0022 00000000 		.4byte	0
+ 1018 0026 00000000 		.4byte	0
+ 1019              	.LLST1:
+ 1020 002a 0C000000 		.4byte	.LVL1
+ 1021 002e F6000000 		.4byte	.LVL33
+ 1022 0032 0600     		.2byte	0x6
+ 1023 0034 79       		.byte	0x79
+ 1024 0035 00       		.sleb128 0
+ 1025 0036 08       		.byte	0x8
+ 1026 0037 FF       		.byte	0xff
+ 1027 0038 1A       		.byte	0x1a
+ 1028 0039 9F       		.byte	0x9f
+ 1029 003a 00000000 		.4byte	0
+ 1030 003e 00000000 		.4byte	0
+ 1031              	.LLST2:
+ 1032 0042 0C000000 		.4byte	.LVL1
+ 1033 0046 6C000000 		.4byte	.LVL14
+ 1034 004a 0200     		.2byte	0x2
+ 1035 004c 3F       		.byte	0x3f
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 21
+
+
+ 1036 004d 9F       		.byte	0x9f
+ 1037 004e 6C000000 		.4byte	.LVL14
+ 1038 0052 A4000000 		.4byte	.LVL19
+ 1039 0056 0100     		.2byte	0x1
+ 1040 0058 56       		.byte	0x56
+ 1041 0059 A4000000 		.4byte	.LVL19
+ 1042 005d B0000000 		.4byte	.LVL22
+ 1043 0061 0200     		.2byte	0x2
+ 1044 0063 3F       		.byte	0x3f
+ 1045 0064 9F       		.byte	0x9f
+ 1046 0065 B0000000 		.4byte	.LVL22
+ 1047 0069 B2000000 		.4byte	.LVL23
+ 1048 006d 0100     		.2byte	0x1
+ 1049 006f 56       		.byte	0x56
+ 1050 0070 B4000000 		.4byte	.LVL24
+ 1051 0074 E0000000 		.4byte	.LVL30
+ 1052 0078 0100     		.2byte	0x1
+ 1053 007a 56       		.byte	0x56
+ 1054 007b E0000000 		.4byte	.LVL30
+ 1055 007f F0000000 		.4byte	.LVL32
+ 1056 0083 0200     		.2byte	0x2
+ 1057 0085 3F       		.byte	0x3f
+ 1058 0086 9F       		.byte	0x9f
+ 1059 0087 00000000 		.4byte	0
+ 1060 008b 00000000 		.4byte	0
+ 1061              	.LLST3:
+ 1062 008f 0C000000 		.4byte	.LVL1
+ 1063 0093 6C000000 		.4byte	.LVL14
+ 1064 0097 0200     		.2byte	0x2
+ 1065 0099 30       		.byte	0x30
+ 1066 009a 9F       		.byte	0x9f
+ 1067 009b 6C000000 		.4byte	.LVL14
+ 1068 009f A8000000 		.4byte	.LVL20
+ 1069 00a3 0100     		.2byte	0x1
+ 1070 00a5 58       		.byte	0x58
+ 1071 00a6 AC000000 		.4byte	.LVL21
+ 1072 00aa E0000000 		.4byte	.LVL30
+ 1073 00ae 0100     		.2byte	0x1
+ 1074 00b0 58       		.byte	0x58
+ 1075 00b1 E0000000 		.4byte	.LVL30
+ 1076 00b5 F0000000 		.4byte	.LVL32
+ 1077 00b9 0200     		.2byte	0x2
+ 1078 00bb 30       		.byte	0x30
+ 1079 00bc 9F       		.byte	0x9f
+ 1080 00bd 00000000 		.4byte	0
+ 1081 00c1 00000000 		.4byte	0
+ 1082              	.LLST4:
+ 1083 00c5 0C000000 		.4byte	.LVL1
+ 1084 00c9 38000000 		.4byte	.LVL7
+ 1085 00cd 0200     		.2byte	0x2
+ 1086 00cf 30       		.byte	0x30
+ 1087 00d0 9F       		.byte	0x9f
+ 1088 00d1 38000000 		.4byte	.LVL7
+ 1089 00d5 6C000000 		.4byte	.LVL14
+ 1090 00d9 0100     		.2byte	0x1
+ 1091 00db 55       		.byte	0x55
+ 1092 00dc 78000000 		.4byte	.LVL16
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 22
+
+
+ 1093 00e0 B6000000 		.4byte	.LVL25
+ 1094 00e4 0100     		.2byte	0x1
+ 1095 00e6 54       		.byte	0x54
+ 1096 00e7 E0000000 		.4byte	.LVL30
+ 1097 00eb F0000000 		.4byte	.LVL32
+ 1098 00ef 0100     		.2byte	0x1
+ 1099 00f1 55       		.byte	0x55
+ 1100 00f2 00000000 		.4byte	0
+ 1101 00f6 00000000 		.4byte	0
+ 1102              		.section	.debug_aranges,"",%progbits
+ 1103 0000 24000000 		.4byte	0x24
+ 1104 0004 0200     		.2byte	0x2
+ 1105 0006 00000000 		.4byte	.Ldebug_info0
+ 1106 000a 04       		.byte	0x4
+ 1107 000b 00       		.byte	0
+ 1108 000c 0000     		.2byte	0
+ 1109 000e 0000     		.2byte	0
+ 1110 0010 00000000 		.4byte	.LFB64
+ 1111 0014 00010000 		.4byte	.LFE64-.LFB64
+ 1112 0018 00000000 		.4byte	.LFB65
+ 1113 001c 60000000 		.4byte	.LFE65-.LFB65
+ 1114 0020 00000000 		.4byte	0
+ 1115 0024 00000000 		.4byte	0
+ 1116              		.section	.debug_ranges,"",%progbits
+ 1117              	.Ldebug_ranges0:
+ 1118 0000 00000000 		.4byte	.LFB64
+ 1119 0004 00010000 		.4byte	.LFE64
+ 1120 0008 00000000 		.4byte	.LFB65
+ 1121 000c 60000000 		.4byte	.LFE65
+ 1122 0010 00000000 		.4byte	0
+ 1123 0014 00000000 		.4byte	0
+ 1124              		.section	.debug_line,"",%progbits
+ 1125              	.Ldebug_line0:
+ 1126 0000 67020000 		.section	.debug_str,"MS",%progbits,1
+ 1126      0200DD01 
+ 1126      00000201 
+ 1126      FB0E0D00 
+ 1126      01010101 
+ 1127              	.LASF6:
+ 1128 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1128      206C6F6E 
+ 1128      6720696E 
+ 1128      7400
+ 1129              	.LASF23:
+ 1130 000e 68756D69 		.ascii	"humidity\000"
+ 1130      64697479 
+ 1130      00
+ 1131              	.LASF12:
+ 1132 0017 666C6F61 		.ascii	"float\000"
+ 1132      7400
+ 1133              	.LASF20:
+ 1134 001d 74696D65 		.ascii	"timeout\000"
+ 1134      6F757400 
+ 1135              	.LASF9:
+ 1136 0025 5F5F696E 		.ascii	"__int32_t\000"
+ 1136      7433325F 
+ 1136      7400
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 23
+
+
+ 1137              	.LASF27:
+ 1138 002f 4448545F 		.ascii	"DHT_Read\000"
+ 1138      52656164 
+ 1138      00
+ 1139              	.LASF10:
+ 1140 0038 696E7433 		.ascii	"int32_t\000"
+ 1140      325F7400 
+ 1141              	.LASF22:
+ 1142 0040 74656D70 		.ascii	"temperature\000"
+ 1142      65726174 
+ 1142      75726500 
+ 1143              	.LASF1:
+ 1144 004c 756E7369 		.ascii	"unsigned char\000"
+ 1144      676E6564 
+ 1144      20636861 
+ 1144      7200
+ 1145              	.LASF32:
+ 1146 005a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1146      43313120 
+ 1146      352E342E 
+ 1146      31203230 
+ 1146      31363036 
+ 1147 008d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1147      20726576 
+ 1147      6973696F 
+ 1147      6E203233 
+ 1147      37373135 
+ 1148 00c0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1148      66756E63 
+ 1148      74696F6E 
+ 1148      2D736563 
+ 1148      74696F6E 
+ 1149              	.LASF5:
+ 1150 00e8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1150      20756E73 
+ 1150      69676E65 
+ 1150      6420696E 
+ 1150      7400
+ 1151              	.LASF3:
+ 1152 00fa 73686F72 		.ascii	"short unsigned int\000"
+ 1152      7420756E 
+ 1152      7369676E 
+ 1152      65642069 
+ 1152      6E7400
+ 1153              	.LASF29:
+ 1154 010d 55415254 		.ascii	"UART_Start\000"
+ 1154      5F537461 
+ 1154      727400
+ 1155              	.LASF37:
+ 1156 0118 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1156      52784275 
+ 1156      66666572 
+ 1156      00
+ 1157              	.LASF13:
+ 1158 0125 646F7562 		.ascii	"double\000"
+ 1158      6C6500
+ 1159              	.LASF36:
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 24
+
+
+ 1160 012c 6D61696E 		.ascii	"main\000"
+ 1160      00
+ 1161              	.LASF11:
+ 1162 0131 75696E74 		.ascii	"uint16\000"
+ 1162      313600
+ 1163              	.LASF8:
+ 1164 0138 756E7369 		.ascii	"unsigned int\000"
+ 1164      676E6564 
+ 1164      20696E74 
+ 1164      00
+ 1165              	.LASF7:
+ 1166 0145 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1166      206C6F6E 
+ 1166      6720756E 
+ 1166      7369676E 
+ 1166      65642069 
+ 1167              	.LASF24:
+ 1168 015c 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1168      74657243 
+ 1168      72697469 
+ 1168      63616C53 
+ 1168      65637469 
+ 1169              	.LASF35:
+ 1170 0173 44485472 		.ascii	"DHTread\000"
+ 1170      65616400 
+ 1171              	.LASF34:
+ 1172 017b 433A5C55 		.ascii	"C:\\Users\\Arisvis\\Documents\\PSoC Creator\\Prueba"
+ 1172      73657273 
+ 1172      5C417269 
+ 1172      73766973 
+ 1172      5C446F63 
+ 1173 01a9 735C5072 		.ascii	"s\\Prueba DHT22.cydsn\000"
+ 1173      75656261 
+ 1173      20444854 
+ 1173      32322E63 
+ 1173      7964736E 
+ 1174              	.LASF16:
+ 1175 01be 73697A65 		.ascii	"sizetype\000"
+ 1175      74797065 
+ 1175      00
+ 1176              	.LASF17:
+ 1177 01c7 49537461 		.ascii	"IState\000"
+ 1177      746500
+ 1178              	.LASF33:
+ 1179 01ce 6D61696E 		.ascii	"main.c\000"
+ 1179      2E6300
+ 1180              	.LASF14:
+ 1181 01d5 63686172 		.ascii	"char\000"
+ 1181      00
+ 1182              	.LASF18:
+ 1183 01da 62697473 		.ascii	"bits\000"
+ 1183      00
+ 1184              	.LASF2:
+ 1185 01df 73686F72 		.ascii	"short int\000"
+ 1185      7420696E 
+ 1185      7400
+ 1186              	.LASF21:
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\cc1CTkHm.s 			page 25
+
+
+ 1187 01e9 6F757470 		.ascii	"outputstring\000"
+ 1187      75747374 
+ 1187      72696E67 
+ 1187      00
+ 1188              	.LASF28:
+ 1189 01f6 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1189      69744372 
+ 1189      69746963 
+ 1189      616C5365 
+ 1189      6374696F 
+ 1190              	.LASF19:
+ 1191 020c 63616C63 		.ascii	"calc\000"
+ 1191      00
+ 1192              	.LASF4:
+ 1193 0211 6C6F6E67 		.ascii	"long int\000"
+ 1193      20696E74 
+ 1193      00
+ 1194              	.LASF15:
+ 1195 021a 6C6F6E67 		.ascii	"long double\000"
+ 1195      20646F75 
+ 1195      626C6500 
+ 1196              	.LASF0:
+ 1197 0226 7369676E 		.ascii	"signed char\000"
+ 1197      65642063 
+ 1197      68617200 
+ 1198              	.LASF31:
+ 1199 0232 55415254 		.ascii	"UART_PutString\000"
+ 1199      5F507574 
+ 1199      53747269 
+ 1199      6E6700
+ 1200              	.LASF25:
+ 1201 0241 4448545F 		.ascii	"DHT_Write\000"
+ 1201      57726974 
+ 1201      6500
+ 1202              	.LASF30:
+ 1203 024b 73707269 		.ascii	"sprintf\000"
+ 1203      6E746600 
+ 1204              	.LASF26:
+ 1205 0253 43794465 		.ascii	"CyDelay\000"
+ 1205      6C617900 
+ 1206              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

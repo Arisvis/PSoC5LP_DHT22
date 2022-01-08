@@ -1,0 +1,1583 @@
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 1040
+  28              	cy_meta_configecc:
+  29 0000 02       		.byte	2
+  30 0001 64       		.byte	100
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 01       		.byte	1
+  34 0005 65       		.byte	101
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 01       		.byte	1
+  38 0009 05       		.byte	5
+  39 000a 01       		.byte	1
+  40 000b 40       		.byte	64
+  41 000c 01       		.byte	1
+  42 000d 07       		.byte	7
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 4C       		.byte	76
+  46 0011 08       		.byte	8
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 38       		.byte	56
+  50 0015 09       		.byte	9
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 02       		.byte	2
+  54 0019 0B       		.byte	11
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 57       		.byte	87
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 2
+
+
+  58 001d 18       		.byte	24
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 41       		.byte	65
+  62 0021 19       		.byte	25
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 4C       		.byte	76
+  66 0025 1A       		.byte	26
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 43       		.byte	67
+  70 0029 1B       		.byte	27
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 03       		.byte	3
+  74 002d 40       		.byte	64
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 02       		.byte	2
+  78 0031 41       		.byte	65
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 03       		.byte	3
+  82 0035 42       		.byte	66
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 02       		.byte	2
+  86 0039 43       		.byte	67
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 02       		.byte	2
+  90 003d 47       		.byte	71
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 01       		.byte	1
+  94 0041 4C       		.byte	76
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 07       		.byte	7
+  98 0045 4D       		.byte	77
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 04       		.byte	4
+ 102 0049 50       		.byte	80
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 01       		.byte	1
+ 106 004d 51       		.byte	81
+ 107 004e 01       		.byte	1
+ 108 004f 40       		.byte	64
+ 109 0050 88       		.byte	-120
+ 110 0051 0F       		.byte	15
+ 111 0052 89       		.byte	-119
+ 112 0053 38       		.byte	56
+ 113 0054 89       		.byte	-119
+ 114 0055 76       		.byte	118
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 3
+
+
+ 115 0056 E6       		.byte	-26
+ 116 0057 40       		.byte	64
+ 117 0058 EA       		.byte	-22
+ 118 0059 02       		.byte	2
+ 119 005a 04       		.byte	4
+ 120 005b 20       		.byte	32
+ 121 005c 06       		.byte	6
+ 122 005d 18       		.byte	24
+ 123 005e 07       		.byte	7
+ 124 005f 01       		.byte	1
+ 125 0060 10       		.byte	16
+ 126 0061 20       		.byte	32
+ 127 0062 13       		.byte	19
+ 128 0063 03       		.byte	3
+ 129 0064 14       		.byte	20
+ 130 0065 01       		.byte	1
+ 131 0066 15       		.byte	21
+ 132 0067 06       		.byte	6
+ 133 0068 17       		.byte	23
+ 134 0069 01       		.byte	1
+ 135 006a 1B       		.byte	27
+ 136 006b 05       		.byte	5
+ 137 006c 1E       		.byte	30
+ 138 006d 06       		.byte	6
+ 139 006e 20       		.byte	32
+ 140 006f 18       		.byte	24
+ 141 0070 22       		.byte	34
+ 142 0071 22       		.byte	34
+ 143 0072 24       		.byte	36
+ 144 0073 38       		.byte	56
+ 145 0074 26       		.byte	38
+ 146 0075 04       		.byte	4
+ 147 0076 28       		.byte	40
+ 148 0077 12       		.byte	18
+ 149 0078 2A       		.byte	42
+ 150 0079 20       		.byte	32
+ 151 007a 2B       		.byte	43
+ 152 007b 06       		.byte	6
+ 153 007c 2C       		.byte	44
+ 154 007d 28       		.byte	40
+ 155 007e 2F       		.byte	47
+ 156 007f 02       		.byte	2
+ 157 0080 34       		.byte	52
+ 158 0081 01       		.byte	1
+ 159 0082 36       		.byte	54
+ 160 0083 3E       		.byte	62
+ 161 0084 37       		.byte	55
+ 162 0085 07       		.byte	7
+ 163 0086 3B       		.byte	59
+ 164 0087 80       		.byte	-128
+ 165 0088 3E       		.byte	62
+ 166 0089 10       		.byte	16
+ 167 008a 40       		.byte	64
+ 168 008b 23       		.byte	35
+ 169 008c 41       		.byte	65
+ 170 008d 04       		.byte	4
+ 171 008e 46       		.byte	70
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 4
+
+
+ 172 008f 0C       		.byte	12
+ 173 0090 47       		.byte	71
+ 174 0091 BE       		.byte	-66
+ 175 0092 48       		.byte	72
+ 176 0093 34       		.byte	52
+ 177 0094 49       		.byte	73
+ 178 0095 FF       		.byte	-1
+ 179 0096 4A       		.byte	74
+ 180 0097 FF       		.byte	-1
+ 181 0098 4B       		.byte	75
+ 182 0099 FF       		.byte	-1
+ 183 009a 4E       		.byte	78
+ 184 009b F0       		.byte	-16
+ 185 009c 4F       		.byte	79
+ 186 009d 44       		.byte	68
+ 187 009e 50       		.byte	80
+ 188 009f 0C       		.byte	12
+ 189 00a0 54       		.byte	84
+ 190 00a1 01       		.byte	1
+ 191 00a2 56       		.byte	86
+ 192 00a3 04       		.byte	4
+ 193 00a4 58       		.byte	88
+ 194 00a5 04       		.byte	4
+ 195 00a6 59       		.byte	89
+ 196 00a7 04       		.byte	4
+ 197 00a8 5A       		.byte	90
+ 198 00a9 04       		.byte	4
+ 199 00aa 5B       		.byte	91
+ 200 00ab 04       		.byte	4
+ 201 00ac 5F       		.byte	95
+ 202 00ad 01       		.byte	1
+ 203 00ae 66       		.byte	102
+ 204 00af C0       		.byte	-64
+ 205 00b0 6A       		.byte	106
+ 206 00b1 40       		.byte	64
+ 207 00b2 6B       		.byte	107
+ 208 00b3 02       		.byte	2
+ 209 00b4 85       		.byte	-123
+ 210 00b5 6D       		.byte	109
+ 211 00b6 87       		.byte	-121
+ 212 00b7 92       		.byte	-110
+ 213 00b8 89       		.byte	-119
+ 214 00b9 6D       		.byte	109
+ 215 00ba 8A       		.byte	-118
+ 216 00bb 02       		.byte	2
+ 217 00bc 8B       		.byte	-117
+ 218 00bd 92       		.byte	-110
+ 219 00be 8D       		.byte	-115
+ 220 00bf 64       		.byte	100
+ 221 00c0 8E       		.byte	-114
+ 222 00c1 01       		.byte	1
+ 223 00c2 8F       		.byte	-113
+ 224 00c3 92       		.byte	-110
+ 225 00c4 90       		.byte	-112
+ 226 00c5 04       		.byte	4
+ 227 00c6 95       		.byte	-107
+ 228 00c7 38       		.byte	56
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 5
+
+
+ 229 00c8 97       		.byte	-105
+ 230 00c9 07       		.byte	7
+ 231 00ca 99       		.byte	-103
+ 232 00cb 49       		.byte	73
+ 233 00cc 9A       		.byte	-102
+ 234 00cd 01       		.byte	1
+ 235 00ce 9B       		.byte	-101
+ 236 00cf B6       		.byte	-74
+ 237 00d0 9D       		.byte	-99
+ 238 00d1 DB       		.byte	-37
+ 239 00d2 9F       		.byte	-97
+ 240 00d3 24       		.byte	36
+ 241 00d4 A5       		.byte	-91
+ 242 00d5 07       		.byte	7
+ 243 00d6 A7       		.byte	-89
+ 244 00d7 38       		.byte	56
+ 245 00d8 AA       		.byte	-86
+ 246 00d9 02       		.byte	2
+ 247 00da B0       		.byte	-80
+ 248 00db 01       		.byte	1
+ 249 00dc B1       		.byte	-79
+ 250 00dd C0       		.byte	-64
+ 251 00de B2       		.byte	-78
+ 252 00df 04       		.byte	4
+ 253 00e0 B3       		.byte	-77
+ 254 00e1 3F       		.byte	63
+ 255 00e2 B4       		.byte	-76
+ 256 00e3 02       		.byte	2
+ 257 00e4 BE       		.byte	-66
+ 258 00e5 15       		.byte	21
+ 259 00e6 D4       		.byte	-44
+ 260 00e7 18       		.byte	24
+ 261 00e8 D6       		.byte	-42
+ 262 00e9 04       		.byte	4
+ 263 00ea D8       		.byte	-40
+ 264 00eb 04       		.byte	4
+ 265 00ec D9       		.byte	-39
+ 266 00ed 04       		.byte	4
+ 267 00ee DB       		.byte	-37
+ 268 00ef 04       		.byte	4
+ 269 00f0 DF       		.byte	-33
+ 270 00f1 01       		.byte	1
+ 271 00f2 00       		.byte	0
+ 272 00f3 10       		.byte	16
+ 273 00f4 02       		.byte	2
+ 274 00f5 01       		.byte	1
+ 275 00f6 07       		.byte	7
+ 276 00f7 10       		.byte	16
+ 277 00f8 0A       		.byte	10
+ 278 00f9 04       		.byte	4
+ 279 00fa 0B       		.byte	11
+ 280 00fb 80       		.byte	-128
+ 281 00fc 0C       		.byte	12
+ 282 00fd 0A       		.byte	10
+ 283 00fe 0E       		.byte	14
+ 284 00ff 02       		.byte	2
+ 285 0100 12       		.byte	18
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 6
+
+
+ 286 0101 08       		.byte	8
+ 287 0102 14       		.byte	20
+ 288 0103 04       		.byte	4
+ 289 0104 16       		.byte	22
+ 290 0105 02       		.byte	2
+ 291 0106 17       		.byte	23
+ 292 0107 05       		.byte	5
+ 293 0108 18       		.byte	24
+ 294 0109 04       		.byte	4
+ 295 010a 1A       		.byte	26
+ 296 010b 20       		.byte	32
+ 297 010c 1B       		.byte	27
+ 298 010d 01       		.byte	1
+ 299 010e 1E       		.byte	30
+ 300 010f 0A       		.byte	10
+ 301 0110 1F       		.byte	31
+ 302 0111 40       		.byte	64
+ 303 0112 20       		.byte	32
+ 304 0113 60       		.byte	96
+ 305 0114 21       		.byte	33
+ 306 0115 08       		.byte	8
+ 307 0116 23       		.byte	35
+ 308 0117 10       		.byte	16
+ 309 0118 27       		.byte	39
+ 310 0119 01       		.byte	1
+ 311 011a 28       		.byte	40
+ 312 011b 20       		.byte	32
+ 313 011c 2C       		.byte	44
+ 314 011d 06       		.byte	6
+ 315 011e 2F       		.byte	47
+ 316 011f 04       		.byte	4
+ 317 0120 30       		.byte	48
+ 318 0121 80       		.byte	-128
+ 319 0122 31       		.byte	49
+ 320 0123 08       		.byte	8
+ 321 0124 32       		.byte	50
+ 322 0125 20       		.byte	32
+ 323 0126 37       		.byte	55
+ 324 0127 15       		.byte	21
+ 325 0128 39       		.byte	57
+ 326 0129 54       		.byte	84
+ 327 012a 3D       		.byte	61
+ 328 012b 08       		.byte	8
+ 329 012c 45       		.byte	69
+ 330 012d 04       		.byte	4
+ 331 012e 47       		.byte	71
+ 332 012f 11       		.byte	17
+ 333 0130 54       		.byte	84
+ 334 0131 08       		.byte	8
+ 335 0132 56       		.byte	86
+ 336 0133 82       		.byte	-126
+ 337 0134 5A       		.byte	90
+ 338 0135 02       		.byte	2
+ 339 0136 5C       		.byte	92
+ 340 0137 80       		.byte	-128
+ 341 0138 5E       		.byte	94
+ 342 0139 08       		.byte	8
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 7
+
+
+ 343 013a 5F       		.byte	95
+ 344 013b 21       		.byte	33
+ 345 013c 60       		.byte	96
+ 346 013d 04       		.byte	4
+ 347 013e 62       		.byte	98
+ 348 013f 02       		.byte	2
+ 349 0140 63       		.byte	99
+ 350 0141 02       		.byte	2
+ 351 0142 65       		.byte	101
+ 352 0143 01       		.byte	1
+ 353 0144 8C       		.byte	-116
+ 354 0145 08       		.byte	8
+ 355 0146 8E       		.byte	-114
+ 356 0147 10       		.byte	16
+ 357 0148 8F       		.byte	-113
+ 358 0149 01       		.byte	1
+ 359 014a 9D       		.byte	-99
+ 360 014b 01       		.byte	1
+ 361 014c A6       		.byte	-90
+ 362 014d 02       		.byte	2
+ 363 014e AE       		.byte	-82
+ 364 014f 02       		.byte	2
+ 365 0150 C0       		.byte	-64
+ 366 0151 23       		.byte	35
+ 367 0152 C2       		.byte	-62
+ 368 0153 BA       		.byte	-70
+ 369 0154 C4       		.byte	-60
+ 370 0155 F2       		.byte	-14
+ 371 0156 CA       		.byte	-54
+ 372 0157 32       		.byte	50
+ 373 0158 CC       		.byte	-52
+ 374 0159 EE       		.byte	-18
+ 375 015a CE       		.byte	-50
+ 376 015b 4E       		.byte	78
+ 377 015c D0       		.byte	-48
+ 378 015d E0       		.byte	-32
+ 379 015e D6       		.byte	-42
+ 380 015f F1       		.byte	-15
+ 381 0160 D8       		.byte	-40
+ 382 0161 8D       		.byte	-115
+ 383 0162 8D       		.byte	-115
+ 384 0163 01       		.byte	1
+ 385 0164 E6       		.byte	-26
+ 386 0165 40       		.byte	64
+ 387 0166 07       		.byte	7
+ 388 0167 01       		.byte	1
+ 389 0168 11       		.byte	17
+ 390 0169 03       		.byte	3
+ 391 016a 15       		.byte	21
+ 392 016b 02       		.byte	2
+ 393 016c 19       		.byte	25
+ 394 016d 03       		.byte	3
+ 395 016e 31       		.byte	49
+ 396 016f 03       		.byte	3
+ 397 0170 39       		.byte	57
+ 398 0171 02       		.byte	2
+ 399 0172 3F       		.byte	63
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 8
+
+
+ 400 0173 01       		.byte	1
+ 401 0174 40       		.byte	64
+ 402 0175 01       		.byte	1
+ 403 0176 47       		.byte	71
+ 404 0177 40       		.byte	64
+ 405 0178 49       		.byte	73
+ 406 0179 FF       		.byte	-1
+ 407 017a 4A       		.byte	74
+ 408 017b 0F       		.byte	15
+ 409 017c 4B       		.byte	75
+ 410 017d FF       		.byte	-1
+ 411 017e 4C       		.byte	76
+ 412 017f 40       		.byte	64
+ 413 0180 4D       		.byte	77
+ 414 0181 20       		.byte	32
+ 415 0182 4E       		.byte	78
+ 416 0183 F0       		.byte	-16
+ 417 0184 4F       		.byte	79
+ 418 0185 05       		.byte	5
+ 419 0186 50       		.byte	80
+ 420 0187 08       		.byte	8
+ 421 0188 59       		.byte	89
+ 422 0189 04       		.byte	4
+ 423 018a 5A       		.byte	90
+ 424 018b 04       		.byte	4
+ 425 018c 5F       		.byte	95
+ 426 018d 01       		.byte	1
+ 427 018e 60       		.byte	96
+ 428 018f 40       		.byte	64
+ 429 0190 61       		.byte	97
+ 430 0191 A8       		.byte	-88
+ 431 0192 62       		.byte	98
+ 432 0193 40       		.byte	64
+ 433 0194 63       		.byte	99
+ 434 0195 20       		.byte	32
+ 435 0196 80       		.byte	-128
+ 436 0197 01       		.byte	1
+ 437 0198 84       		.byte	-124
+ 438 0199 59       		.byte	89
+ 439 019a 85       		.byte	-123
+ 440 019b 02       		.byte	2
+ 441 019c 86       		.byte	-122
+ 442 019d 22       		.byte	34
+ 443 019e 87       		.byte	-121
+ 444 019f 01       		.byte	1
+ 445 01a0 88       		.byte	-120
+ 446 01a1 79       		.byte	121
+ 447 01a2 8A       		.byte	-118
+ 448 01a3 04       		.byte	4
+ 449 01a4 8B       		.byte	-117
+ 450 01a5 08       		.byte	8
+ 451 01a6 8D       		.byte	-115
+ 452 01a7 04       		.byte	4
+ 453 01a8 8E       		.byte	-114
+ 454 01a9 26       		.byte	38
+ 455 01aa 90       		.byte	-112
+ 456 01ab 7F       		.byte	127
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 9
+
+
+ 457 01ac 94       		.byte	-108
+ 458 01ad 67       		.byte	103
+ 459 01ae 95       		.byte	-107
+ 460 01af 03       		.byte	3
+ 461 01b0 96       		.byte	-106
+ 462 01b1 18       		.byte	24
+ 463 01b2 98       		.byte	-104
+ 464 01b3 10       		.byte	16
+ 465 01b4 99       		.byte	-103
+ 466 01b5 04       		.byte	4
+ 467 01b6 9E       		.byte	-98
+ 468 01b7 01       		.byte	1
+ 469 01b8 A1       		.byte	-95
+ 470 01b9 03       		.byte	3
+ 471 01ba A6       		.byte	-90
+ 472 01bb 18       		.byte	24
+ 473 01bc A7       		.byte	-89
+ 474 01bd 08       		.byte	8
+ 475 01be A8       		.byte	-88
+ 476 01bf 08       		.byte	8
+ 477 01c0 A9       		.byte	-87
+ 478 01c1 02       		.byte	2
+ 479 01c2 AB       		.byte	-85
+ 480 01c3 01       		.byte	1
+ 481 01c4 AF       		.byte	-81
+ 482 01c5 10       		.byte	16
+ 483 01c6 B2       		.byte	-78
+ 484 01c7 1F       		.byte	31
+ 485 01c8 B3       		.byte	-77
+ 486 01c9 01       		.byte	1
+ 487 01ca B4       		.byte	-76
+ 488 01cb 38       		.byte	56
+ 489 01cc B5       		.byte	-75
+ 490 01cd 06       		.byte	6
+ 491 01ce B6       		.byte	-74
+ 492 01cf 40       		.byte	64
+ 493 01d0 B7       		.byte	-73
+ 494 01d1 18       		.byte	24
+ 495 01d2 B9       		.byte	-71
+ 496 01d3 28       		.byte	40
+ 497 01d4 BA       		.byte	-70
+ 498 01d5 0A       		.byte	10
+ 499 01d6 BE       		.byte	-66
+ 500 01d7 40       		.byte	64
+ 501 01d8 BF       		.byte	-65
+ 502 01d9 40       		.byte	64
+ 503 01da C0       		.byte	-64
+ 504 01db 34       		.byte	52
+ 505 01dc C1       		.byte	-63
+ 506 01dd 05       		.byte	5
+ 507 01de C2       		.byte	-62
+ 508 01df 02       		.byte	2
+ 509 01e0 C4       		.byte	-60
+ 510 01e1 01       		.byte	1
+ 511 01e2 C7       		.byte	-57
+ 512 01e3 CE       		.byte	-50
+ 513 01e4 C8       		.byte	-56
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 10
+
+
+ 514 01e5 30       		.byte	48
+ 515 01e6 C9       		.byte	-55
+ 516 01e7 FF       		.byte	-1
+ 517 01e8 CA       		.byte	-54
+ 518 01e9 FF       		.byte	-1
+ 519 01ea CB       		.byte	-53
+ 520 01eb FF       		.byte	-1
+ 521 01ec CC       		.byte	-52
+ 522 01ed 62       		.byte	98
+ 523 01ee CD       		.byte	-51
+ 524 01ef A0       		.byte	-96
+ 525 01f0 CE       		.byte	-50
+ 526 01f1 F0       		.byte	-16
+ 527 01f2 CF       		.byte	-49
+ 528 01f3 41       		.byte	65
+ 529 01f4 D0       		.byte	-48
+ 530 01f5 0C       		.byte	12
+ 531 01f6 D6       		.byte	-42
+ 532 01f7 02       		.byte	2
+ 533 01f8 D7       		.byte	-41
+ 534 01f9 10       		.byte	16
+ 535 01fa D8       		.byte	-40
+ 536 01fb 04       		.byte	4
+ 537 01fc D9       		.byte	-39
+ 538 01fd 04       		.byte	4
+ 539 01fe DA       		.byte	-38
+ 540 01ff 04       		.byte	4
+ 541 0200 DB       		.byte	-37
+ 542 0201 04       		.byte	4
+ 543 0202 DF       		.byte	-33
+ 544 0203 01       		.byte	1
+ 545 0204 E6       		.byte	-26
+ 546 0205 40       		.byte	64
+ 547 0206 E7       		.byte	-25
+ 548 0207 02       		.byte	2
+ 549 0208 E9       		.byte	-23
+ 550 0209 10       		.byte	16
+ 551 020a EA       		.byte	-22
+ 552 020b 30       		.byte	48
+ 553 020c EB       		.byte	-21
+ 554 020d 10       		.byte	16
+ 555 020e ED       		.byte	-19
+ 556 020f 10       		.byte	16
+ 557 0210 EE       		.byte	-18
+ 558 0211 10       		.byte	16
+ 559 0212 EF       		.byte	-17
+ 560 0213 12       		.byte	18
+ 561 0214 00       		.byte	0
+ 562 0215 44       		.byte	68
+ 563 0216 03       		.byte	3
+ 564 0217 88       		.byte	-120
+ 565 0218 09       		.byte	9
+ 566 0219 88       		.byte	-120
+ 567 021a 0A       		.byte	10
+ 568 021b 40       		.byte	64
+ 569 021c 0B       		.byte	11
+ 570 021d 84       		.byte	-124
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 11
+
+
+ 571 021e 12       		.byte	18
+ 572 021f 20       		.byte	32
+ 573 0220 13       		.byte	19
+ 574 0221 20       		.byte	32
+ 575 0222 19       		.byte	25
+ 576 0223 81       		.byte	-127
+ 577 0224 1A       		.byte	26
+ 578 0225 44       		.byte	68
+ 579 0226 1B       		.byte	27
+ 580 0227 08       		.byte	8
+ 581 0228 20       		.byte	32
+ 582 0229 19       		.byte	25
+ 583 022a 22       		.byte	34
+ 584 022b 20       		.byte	32
+ 585 022c 27       		.byte	39
+ 586 022d 40       		.byte	64
+ 587 022e 28       		.byte	40
+ 588 022f 20       		.byte	32
+ 589 0230 29       		.byte	41
+ 590 0231 01       		.byte	1
+ 591 0232 2B       		.byte	43
+ 592 0233 0A       		.byte	10
+ 593 0234 31       		.byte	49
+ 594 0235 08       		.byte	8
+ 595 0236 32       		.byte	50
+ 596 0237 20       		.byte	32
+ 597 0238 37       		.byte	55
+ 598 0239 15       		.byte	21
+ 599 023a 38       		.byte	56
+ 600 023b 04       		.byte	4
+ 601 023c 3B       		.byte	59
+ 602 023d 50       		.byte	80
+ 603 023e 3D       		.byte	61
+ 604 023f 08       		.byte	8
+ 605 0240 3F       		.byte	63
+ 606 0241 08       		.byte	8
+ 607 0242 40       		.byte	64
+ 608 0243 41       		.byte	65
+ 609 0244 41       		.byte	65
+ 610 0245 08       		.byte	8
+ 611 0246 42       		.byte	66
+ 612 0247 04       		.byte	4
+ 613 0248 47       		.byte	71
+ 614 0249 40       		.byte	64
+ 615 024a 4B       		.byte	75
+ 616 024b 80       		.byte	-128
+ 617 024c 4F       		.byte	79
+ 618 024d 08       		.byte	8
+ 619 024e 52       		.byte	82
+ 620 024f 09       		.byte	9
+ 621 0250 54       		.byte	84
+ 622 0251 02       		.byte	2
+ 623 0252 57       		.byte	87
+ 624 0253 01       		.byte	1
+ 625 0254 59       		.byte	89
+ 626 0255 80       		.byte	-128
+ 627 0256 68       		.byte	104
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 12
+
+
+ 628 0257 80       		.byte	-128
+ 629 0258 69       		.byte	105
+ 630 0259 54       		.byte	84
+ 631 025a 6A       		.byte	106
+ 632 025b 80       		.byte	-128
+ 633 025c 70       		.byte	112
+ 634 025d 10       		.byte	16
+ 635 025e 71       		.byte	113
+ 636 025f 04       		.byte	4
+ 637 0260 73       		.byte	115
+ 638 0261 64       		.byte	100
+ 639 0262 90       		.byte	-112
+ 640 0263 40       		.byte	64
+ 641 0264 93       		.byte	-109
+ 642 0265 10       		.byte	16
+ 643 0266 94       		.byte	-108
+ 644 0267 10       		.byte	16
+ 645 0268 95       		.byte	-107
+ 646 0269 54       		.byte	84
+ 647 026a 96       		.byte	-106
+ 648 026b 06       		.byte	6
+ 649 026c 97       		.byte	-105
+ 650 026d 08       		.byte	8
+ 651 026e 9A       		.byte	-102
+ 652 026f 80       		.byte	-128
+ 653 0270 9B       		.byte	-101
+ 654 0271 01       		.byte	1
+ 655 0272 9C       		.byte	-100
+ 656 0273 A0       		.byte	-96
+ 657 0274 9E       		.byte	-98
+ 658 0275 01       		.byte	1
+ 659 0276 9F       		.byte	-97
+ 660 0277 14       		.byte	20
+ 661 0278 A0       		.byte	-96
+ 662 0279 10       		.byte	16
+ 663 027a A4       		.byte	-92
+ 664 027b 82       		.byte	-126
+ 665 027c A5       		.byte	-91
+ 666 027d 04       		.byte	4
+ 667 027e A6       		.byte	-90
+ 668 027f 28       		.byte	40
+ 669 0280 AA       		.byte	-86
+ 670 0281 80       		.byte	-128
+ 671 0282 AB       		.byte	-85
+ 672 0283 20       		.byte	32
+ 673 0284 C0       		.byte	-64
+ 674 0285 0F       		.byte	15
+ 675 0286 C2       		.byte	-62
+ 676 0287 0F       		.byte	15
+ 677 0288 C4       		.byte	-60
+ 678 0289 06       		.byte	6
+ 679 028a CA       		.byte	-54
+ 680 028b 0F       		.byte	15
+ 681 028c CC       		.byte	-52
+ 682 028d E6       		.byte	-26
+ 683 028e CE       		.byte	-50
+ 684 028f 4E       		.byte	78
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 13
+
+
+ 685 0290 D0       		.byte	-48
+ 686 0291 1F       		.byte	31
+ 687 0292 D2       		.byte	-46
+ 688 0293 08       		.byte	8
+ 689 0294 D6       		.byte	-42
+ 690 0295 08       		.byte	8
+ 691 0296 04       		.byte	4
+ 692 0297 24       		.byte	36
+ 693 0298 05       		.byte	5
+ 694 0299 0F       		.byte	15
+ 695 029a 06       		.byte	6
+ 696 029b DB       		.byte	-37
+ 697 029c 07       		.byte	7
+ 698 029d 70       		.byte	112
+ 699 029e 08       		.byte	8
+ 700 029f E0       		.byte	-32
+ 701 02a0 09       		.byte	9
+ 702 02a1 08       		.byte	8
+ 703 02a2 0A       		.byte	10
+ 704 02a3 1C       		.byte	28
+ 705 02a4 0C       		.byte	12
+ 706 02a5 1C       		.byte	28
+ 707 02a6 0E       		.byte	14
+ 708 02a7 E3       		.byte	-29
+ 709 02a8 0F       		.byte	15
+ 710 02a9 73       		.byte	115
+ 711 02aa 10       		.byte	16
+ 712 02ab 92       		.byte	-110
+ 713 02ac 11       		.byte	17
+ 714 02ad 73       		.byte	115
+ 715 02ae 12       		.byte	18
+ 716 02af 49       		.byte	73
+ 717 02b0 13       		.byte	19
+ 718 02b1 0C       		.byte	12
+ 719 02b2 15       		.byte	21
+ 720 02b3 0C       		.byte	12
+ 721 02b4 17       		.byte	23
+ 722 02b5 73       		.byte	115
+ 723 02b6 18       		.byte	24
+ 724 02b7 03       		.byte	3
+ 725 02b8 1A       		.byte	26
+ 726 02b9 1C       		.byte	28
+ 727 02ba 1B       		.byte	27
+ 728 02bb 0C       		.byte	12
+ 729 02bc 1D       		.byte	29
+ 730 02bd 04       		.byte	4
+ 731 02be 20       		.byte	32
+ 732 02bf 6D       		.byte	109
+ 733 02c0 21       		.byte	33
+ 734 02c1 7F       		.byte	127
+ 735 02c2 22       		.byte	34
+ 736 02c3 92       		.byte	-110
+ 737 02c4 24       		.byte	36
+ 738 02c5 B6       		.byte	-74
+ 739 02c6 25       		.byte	37
+ 740 02c7 11       		.byte	17
+ 741 02c8 26       		.byte	38
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 14
+
+
+ 742 02c9 49       		.byte	73
+ 743 02ca 27       		.byte	39
+ 744 02cb 80       		.byte	-128
+ 745 02cc 28       		.byte	40
+ 746 02cd B6       		.byte	-74
+ 747 02ce 29       		.byte	41
+ 748 02cf 22       		.byte	34
+ 749 02d0 2A       		.byte	42
+ 750 02d1 49       		.byte	73
+ 751 02d2 2D       		.byte	45
+ 752 02d3 33       		.byte	51
+ 753 02d4 30       		.byte	48
+ 754 02d5 FF       		.byte	-1
+ 755 02d6 31       		.byte	49
+ 756 02d7 30       		.byte	48
+ 757 02d8 33       		.byte	51
+ 758 02d9 0F       		.byte	15
+ 759 02da 35       		.byte	53
+ 760 02db 4C       		.byte	76
+ 761 02dc 37       		.byte	55
+ 762 02dd 80       		.byte	-128
+ 763 02de 3B       		.byte	59
+ 764 02df 28       		.byte	40
+ 765 02e0 3E       		.byte	62
+ 766 02e1 01       		.byte	1
+ 767 02e2 58       		.byte	88
+ 768 02e3 04       		.byte	4
+ 769 02e4 59       		.byte	89
+ 770 02e5 04       		.byte	4
+ 771 02e6 5F       		.byte	95
+ 772 02e7 01       		.byte	1
+ 773 02e8 82       		.byte	-126
+ 774 02e9 04       		.byte	4
+ 775 02ea 83       		.byte	-125
+ 776 02eb 80       		.byte	-128
+ 777 02ec 84       		.byte	-124
+ 778 02ed 0C       		.byte	12
+ 779 02ee 87       		.byte	-121
+ 780 02ef 35       		.byte	53
+ 781 02f0 8A       		.byte	-118
+ 782 02f1 0C       		.byte	12
+ 783 02f2 8E       		.byte	-114
+ 784 02f3 02       		.byte	2
+ 785 02f4 91       		.byte	-111
+ 786 02f5 13       		.byte	19
+ 787 02f6 92       		.byte	-110
+ 788 02f7 01       		.byte	1
+ 789 02f8 93       		.byte	-109
+ 790 02f9 E4       		.byte	-28
+ 791 02fa 94       		.byte	-108
+ 792 02fb 01       		.byte	1
+ 793 02fc 95       		.byte	-107
+ 794 02fd CA       		.byte	-54
+ 795 02fe 97       		.byte	-105
+ 796 02ff 34       		.byte	52
+ 797 0300 98       		.byte	-104
+ 798 0301 10       		.byte	16
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 15
+
+
+ 799 0302 99       		.byte	-103
+ 800 0303 13       		.byte	19
+ 801 0304 9A       		.byte	-102
+ 802 0305 04       		.byte	4
+ 803 0306 9B       		.byte	-101
+ 804 0307 6C       		.byte	108
+ 805 0308 9C       		.byte	-100
+ 806 0309 01       		.byte	1
+ 807 030a A0       		.byte	-96
+ 808 030b 0C       		.byte	12
+ 809 030c A4       		.byte	-92
+ 810 030d 01       		.byte	1
+ 811 030e A8       		.byte	-88
+ 812 030f 01       		.byte	1
+ 813 0310 AB       		.byte	-85
+ 814 0311 C8       		.byte	-56
+ 815 0312 AC       		.byte	-84
+ 816 0313 01       		.byte	1
+ 817 0314 AD       		.byte	-83
+ 818 0315 03       		.byte	3
+ 819 0316 AF       		.byte	-81
+ 820 0317 04       		.byte	4
+ 821 0318 B0       		.byte	-80
+ 822 0319 03       		.byte	3
+ 823 031a B2       		.byte	-78
+ 824 031b 18       		.byte	24
+ 825 031c B3       		.byte	-77
+ 826 031d 0F       		.byte	15
+ 827 031e B4       		.byte	-76
+ 828 031f 04       		.byte	4
+ 829 0320 B5       		.byte	-75
+ 830 0321 F0       		.byte	-16
+ 831 0322 B8       		.byte	-72
+ 832 0323 08       		.byte	8
+ 833 0324 BB       		.byte	-69
+ 834 0325 28       		.byte	40
+ 835 0326 BE       		.byte	-66
+ 836 0327 10       		.byte	16
+ 837 0328 D8       		.byte	-40
+ 838 0329 04       		.byte	4
+ 839 032a D9       		.byte	-39
+ 840 032b 04       		.byte	4
+ 841 032c DF       		.byte	-33
+ 842 032d 01       		.byte	1
+ 843 032e 00       		.byte	0
+ 844 032f 28       		.byte	40
+ 845 0330 01       		.byte	1
+ 846 0331 20       		.byte	32
+ 847 0332 03       		.byte	3
+ 848 0333 02       		.byte	2
+ 849 0334 04       		.byte	4
+ 850 0335 80       		.byte	-128
+ 851 0336 06       		.byte	6
+ 852 0337 80       		.byte	-128
+ 853 0338 07       		.byte	7
+ 854 0339 14       		.byte	20
+ 855 033a 08       		.byte	8
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 16
+
+
+ 856 033b 20       		.byte	32
+ 857 033c 0A       		.byte	10
+ 858 033d 80       		.byte	-128
+ 859 033e 0C       		.byte	12
+ 860 033f 80       		.byte	-128
+ 861 0340 0E       		.byte	14
+ 862 0341 40       		.byte	64
+ 863 0342 0F       		.byte	15
+ 864 0343 18       		.byte	24
+ 865 0344 10       		.byte	16
+ 866 0345 80       		.byte	-128
+ 867 0346 11       		.byte	17
+ 868 0347 14       		.byte	20
+ 869 0348 15       		.byte	21
+ 870 0349 14       		.byte	20
+ 871 034a 16       		.byte	22
+ 872 034b 02       		.byte	2
+ 873 034c 17       		.byte	23
+ 874 034d 01       		.byte	1
+ 875 034e 18       		.byte	24
+ 876 034f 80       		.byte	-128
+ 877 0350 1E       		.byte	30
+ 878 0351 40       		.byte	64
+ 879 0352 1F       		.byte	31
+ 880 0353 16       		.byte	22
+ 881 0354 20       		.byte	32
+ 882 0355 04       		.byte	4
+ 883 0356 21       		.byte	33
+ 884 0357 88       		.byte	-120
+ 885 0358 22       		.byte	34
+ 886 0359 01       		.byte	1
+ 887 035a 27       		.byte	39
+ 888 035b 14       		.byte	20
+ 889 035c 28       		.byte	40
+ 890 035d 20       		.byte	32
+ 891 035e 29       		.byte	41
+ 892 035f 21       		.byte	33
+ 893 0360 2B       		.byte	43
+ 894 0361 02       		.byte	2
+ 895 0362 2E       		.byte	46
+ 896 0363 80       		.byte	-128
+ 897 0364 2F       		.byte	47
+ 898 0365 04       		.byte	4
+ 899 0366 30       		.byte	48
+ 900 0367 01       		.byte	1
+ 901 0368 31       		.byte	49
+ 902 0369 10       		.byte	16
+ 903 036a 33       		.byte	51
+ 904 036b 48       		.byte	72
+ 905 036c 37       		.byte	55
+ 906 036d 15       		.byte	21
+ 907 036e 38       		.byte	56
+ 908 036f 64       		.byte	100
+ 909 0370 3F       		.byte	63
+ 910 0371 0A       		.byte	10
+ 911 0372 48       		.byte	72
+ 912 0373 04       		.byte	4
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 17
+
+
+ 913 0374 49       		.byte	73
+ 914 0375 10       		.byte	16
+ 915 0376 4B       		.byte	75
+ 916 0377 10       		.byte	16
+ 917 0378 81       		.byte	-127
+ 918 0379 04       		.byte	4
+ 919 037a 83       		.byte	-125
+ 920 037b 40       		.byte	64
+ 921 037c 84       		.byte	-124
+ 922 037d 01       		.byte	1
+ 923 037e 85       		.byte	-123
+ 924 037f 08       		.byte	8
+ 925 0380 88       		.byte	-120
+ 926 0381 20       		.byte	32
+ 927 0382 8A       		.byte	-118
+ 928 0383 02       		.byte	2
+ 929 0384 8B       		.byte	-117
+ 930 0385 80       		.byte	-128
+ 931 0386 90       		.byte	-112
+ 932 0387 60       		.byte	96
+ 933 0388 91       		.byte	-111
+ 934 0389 14       		.byte	20
+ 935 038a 92       		.byte	-110
+ 936 038b 80       		.byte	-128
+ 937 038c 94       		.byte	-108
+ 938 038d 04       		.byte	4
+ 939 038e 96       		.byte	-106
+ 940 038f 02       		.byte	2
+ 941 0390 97       		.byte	-105
+ 942 0391 28       		.byte	40
+ 943 0392 99       		.byte	-103
+ 944 0393 05       		.byte	5
+ 945 0394 9A       		.byte	-102
+ 946 0395 80       		.byte	-128
+ 947 0396 9B       		.byte	-101
+ 948 0397 01       		.byte	1
+ 949 0398 9C       		.byte	-100
+ 950 0399 20       		.byte	32
+ 951 039a 9F       		.byte	-97
+ 952 039b 14       		.byte	20
+ 953 039c A0       		.byte	-96
+ 954 039d 94       		.byte	-108
+ 955 039e A3       		.byte	-93
+ 956 039f 0D       		.byte	13
+ 957 03a0 A5       		.byte	-91
+ 958 03a1 88       		.byte	-120
+ 959 03a2 A7       		.byte	-89
+ 960 03a3 82       		.byte	-126
+ 961 03a4 B0       		.byte	-80
+ 962 03a5 80       		.byte	-128
+ 963 03a6 B3       		.byte	-77
+ 964 03a7 10       		.byte	16
+ 965 03a8 C0       		.byte	-64
+ 966 03a9 F7       		.byte	-9
+ 967 03aa C2       		.byte	-62
+ 968 03ab FA       		.byte	-6
+ 969 03ac C4       		.byte	-60
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 18
+
+
+ 970 03ad FE       		.byte	-2
+ 971 03ae CA       		.byte	-54
+ 972 03af 3F       		.byte	63
+ 973 03b0 CC       		.byte	-52
+ 974 03b1 EF       		.byte	-17
+ 975 03b2 CE       		.byte	-50
+ 976 03b3 CE       		.byte	-50
+ 977 03b4 30       		.byte	48
+ 978 03b5 20       		.byte	32
+ 979 03b6 37       		.byte	55
+ 980 03b7 10       		.byte	16
+ 981 03b8 CC       		.byte	-52
+ 982 03b9 30       		.byte	48
+ 983 03ba 9F       		.byte	-97
+ 984 03bb 10       		.byte	16
+ 985 03bc A4       		.byte	-92
+ 986 03bd 20       		.byte	32
+ 987 03be 8F       		.byte	-113
+ 988 03bf 10       		.byte	16
+ 989 03c0 9F       		.byte	-97
+ 990 03c1 10       		.byte	16
+ 991 03c2 A4       		.byte	-92
+ 992 03c3 20       		.byte	32
+ 993 03c4 AC       		.byte	-84
+ 994 03c5 20       		.byte	32
+ 995 03c6 EA       		.byte	-22
+ 996 03c7 40       		.byte	64
+ 997 03c8 8D       		.byte	-115
+ 998 03c9 02       		.byte	2
+ 999 03ca E0       		.byte	-32
+ 1000 03cb 02       		.byte	2
+ 1001 03cc 99       		.byte	-103
+ 1002 03cd 02       		.byte	2
+ 1003 03ce 10       		.byte	16
+ 1004 03cf 40       		.byte	64
+ 1005 03d0 75       		.byte	117
+ 1006 03d1 02       		.byte	2
+ 1007 03d2 88       		.byte	-120
+ 1008 03d3 40       		.byte	64
+ 1009 03d4 99       		.byte	-103
+ 1010 03d5 02       		.byte	2
+ 1011 03d6 C4       		.byte	-60
+ 1012 03d7 08       		.byte	8
+ 1013 03d8 DE       		.byte	-34
+ 1014 03d9 04       		.byte	4
+ 1015 03da E2       		.byte	-30
+ 1016 03db 01       		.byte	1
+ 1017 03dc 00       		.byte	0
+ 1018 03dd 01       		.byte	1
+ 1019 03de 0C       		.byte	12
+ 1020 03df 01       		.byte	1
+ 1021 03e0 10       		.byte	16
+ 1022 03e1 01       		.byte	1
+ 1023 03e2 1C       		.byte	28
+ 1024 03e3 01       		.byte	1
+ 1025 03e4 00       		.byte	0
+ 1026 03e5 0F       		.byte	15
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 19
+
+
+ 1027 03e6 00       		.byte	0
+ 1028 03e7 00       		.byte	0
+ 1029 03e8 80       		.byte	-128
+ 1030 03e9 80       		.byte	-128
+ 1031 03ea 00       		.byte	0
+ 1032 03eb 00       		.byte	0
+ 1033 03ec 40       		.byte	64
+ 1034 03ed 00       		.byte	0
+ 1035 03ee 00       		.byte	0
+ 1036 03ef 00       		.byte	0
+ 1037 03f0 01       		.byte	1
+ 1038 03f1 00       		.byte	0
+ 1039 03f2 00       		.byte	0
+ 1040 03f3 01       		.byte	1
+ 1041 03f4 00       		.byte	0
+ 1042 03f5 00       		.byte	0
+ 1043 03f6 00       		.byte	0
+ 1044 03f7 00       		.byte	0
+ 1045 03f8 00       		.byte	0
+ 1046 03f9 00       		.byte	0
+ 1047 03fa 00       		.byte	0
+ 1048 03fb 00       		.byte	0
+ 1049 03fc 80       		.byte	-128
+ 1050 03fd 00       		.byte	0
+ 1051 03fe 40       		.byte	64
+ 1052 03ff 80       		.byte	-128
+ 1053 0400 80       		.byte	-128
+ 1054 0401 00       		.byte	0
+ 1055 0402 80       		.byte	-128
+ 1056 0403 00       		.byte	0
+ 1057 0404 00       		.byte	0
+ 1058 0405 00       		.byte	0
+ 1059 0406 00       		.byte	0
+ 1060 0407 00       		.byte	0
+ 1061 0408 00       		.byte	0
+ 1062 0409 0B       		.byte	11
+ 1063 040a 0B       		.byte	11
+ 1064 040b 00       		.byte	0
+ 1065 040c 00       		.byte	0
+ 1066 040d 00       		.byte	0
+ 1067 040e 00       		.byte	0
+ 1068 040f 00       		.byte	0
+ 1069              		.section	.cywolatch,"a",%progbits
+ 1070              		.align	2
+ 1071              		.type	cy_meta_wonvl, %object
+ 1072              		.size	cy_meta_wonvl, 4
+ 1073              	cy_meta_wonvl:
+ 1074 0000 BC       		.byte	-68
+ 1075 0001 90       		.byte	-112
+ 1076 0002 AC       		.byte	-84
+ 1077 0003 AF       		.byte	-81
+ 1078              		.section	.cycustnvl,"a",%progbits
+ 1079              		.align	2
+ 1080              		.type	cy_meta_custnvl, %object
+ 1081              		.size	cy_meta_custnvl, 4
+ 1082              	cy_meta_custnvl:
+ 1083 0000 00       		.byte	0
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 20
+
+
+ 1084 0001 00       		.byte	0
+ 1085 0002 40       		.byte	64
+ 1086 0003 05       		.byte	5
+ 1087              		.section	.cymeta,"a",%progbits
+ 1088              		.align	2
+ 1089              		.type	cy_metadata, %object
+ 1090              		.size	cy_metadata, 12
+ 1091              	cy_metadata:
+ 1092 0000 00       		.byte	0
+ 1093 0001 01       		.byte	1
+ 1094 0002 2E       		.byte	46
+ 1095 0003 16       		.byte	22
+ 1096 0004 10       		.byte	16
+ 1097 0005 69       		.byte	105
+ 1098 0006 00       		.byte	0
+ 1099 0007 01       		.byte	1
+ 1100 0008 00       		.byte	0
+ 1101 0009 00       		.byte	0
+ 1102 000a 00       		.byte	0
+ 1103 000b 00       		.byte	0
+ 1104              		.section	.cyflashprotect,"a",%progbits
+ 1105              		.align	2
+ 1106              		.type	cy_meta_flashprotect, %object
+ 1107              		.size	cy_meta_flashprotect, 256
+ 1108              	cy_meta_flashprotect:
+ 1109 0000 00000000 		.space	256
+ 1109      00000000 
+ 1109      00000000 
+ 1109      00000000 
+ 1109      00000000 
+ 1110              		.text
+ 1111              	.Letext0:
+ 1112              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1113              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1114              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 1115              		.section	.debug_info,"",%progbits
+ 1116              	.Ldebug_info0:
+ 1117 0000 31010000 		.4byte	0x131
+ 1118 0004 0400     		.2byte	0x4
+ 1119 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1120 000a 04       		.byte	0x4
+ 1121 000b 01       		.uleb128 0x1
+ 1122 000c 24000000 		.4byte	.LASF17
+ 1123 0010 0C       		.byte	0xc
+ 1124 0011 C1010000 		.4byte	.LASF18
+ 1125 0015 48010000 		.4byte	.LASF19
+ 1126 0019 00000000 		.4byte	.Ldebug_line0
+ 1127 001d 02       		.uleb128 0x2
+ 1128 001e 01       		.byte	0x1
+ 1129 001f 06       		.byte	0x6
+ 1130 0020 B5010000 		.4byte	.LASF0
+ 1131 0024 03       		.uleb128 0x3
+ 1132 0025 00000000 		.4byte	.LASF9
+ 1133 0029 01       		.byte	0x1
+ 1134 002a 1D       		.byte	0x1d
+ 1135 002b 2F000000 		.4byte	0x2f
+ 1136 002f 02       		.uleb128 0x2
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 21
+
+
+ 1137 0030 01       		.byte	0x1
+ 1138 0031 08       		.byte	0x8
+ 1139 0032 16000000 		.4byte	.LASF1
+ 1140 0036 02       		.uleb128 0x2
+ 1141 0037 02       		.byte	0x2
+ 1142 0038 05       		.byte	0x5
+ 1143 0039 A2010000 		.4byte	.LASF2
+ 1144 003d 02       		.uleb128 0x2
+ 1145 003e 02       		.byte	0x2
+ 1146 003f 07       		.byte	0x7
+ 1147 0040 C4000000 		.4byte	.LASF3
+ 1148 0044 02       		.uleb128 0x2
+ 1149 0045 04       		.byte	0x4
+ 1150 0046 05       		.byte	0x5
+ 1151 0047 AC010000 		.4byte	.LASF4
+ 1152 004b 02       		.uleb128 0x2
+ 1153 004c 04       		.byte	0x4
+ 1154 004d 07       		.byte	0x7
+ 1155 004e B2000000 		.4byte	.LASF5
+ 1156 0052 02       		.uleb128 0x2
+ 1157 0053 08       		.byte	0x8
+ 1158 0054 05       		.byte	0x5
+ 1159 0055 94010000 		.4byte	.LASF6
+ 1160 0059 02       		.uleb128 0x2
+ 1161 005a 08       		.byte	0x8
+ 1162 005b 07       		.byte	0x7
+ 1163 005c 06010000 		.4byte	.LASF7
+ 1164 0060 04       		.uleb128 0x4
+ 1165 0061 04       		.byte	0x4
+ 1166 0062 05       		.byte	0x5
+ 1167 0063 696E7400 		.ascii	"int\000"
+ 1168 0067 02       		.uleb128 0x2
+ 1169 0068 04       		.byte	0x4
+ 1170 0069 07       		.byte	0x7
+ 1171 006a F9000000 		.4byte	.LASF8
+ 1172 006e 03       		.uleb128 0x3
+ 1173 006f 1D010000 		.4byte	.LASF10
+ 1174 0073 02       		.byte	0x2
+ 1175 0074 18       		.byte	0x18
+ 1176 0075 24000000 		.4byte	0x24
+ 1177 0079 05       		.uleb128 0x5
+ 1178 007a 91000000 		.4byte	0x91
+ 1179 007e 8A000000 		.4byte	0x8a
+ 1180 0082 06       		.uleb128 0x6
+ 1181 0083 8A000000 		.4byte	0x8a
+ 1182 0087 0F04     		.2byte	0x40f
+ 1183 0089 00       		.byte	0
+ 1184 008a 02       		.uleb128 0x2
+ 1185 008b 04       		.byte	0x4
+ 1186 008c 07       		.byte	0x7
+ 1187 008d 8B010000 		.4byte	.LASF11
+ 1188 0091 07       		.uleb128 0x7
+ 1189 0092 6E000000 		.4byte	0x6e
+ 1190 0096 08       		.uleb128 0x8
+ 1191 0097 E7000000 		.4byte	.LASF12
+ 1192 009b 03       		.byte	0x3
+ 1193 009c 1F       		.byte	0x1f
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 22
+
+
+ 1194 009d A7000000 		.4byte	0xa7
+ 1195 00a1 05       		.uleb128 0x5
+ 1196 00a2 03       		.byte	0x3
+ 1197 00a3 00000000 		.4byte	cy_meta_configecc
+ 1198 00a7 07       		.uleb128 0x7
+ 1199 00a8 79000000 		.4byte	0x79
+ 1200 00ac 05       		.uleb128 0x5
+ 1201 00ad 91000000 		.4byte	0x91
+ 1202 00b1 BC000000 		.4byte	0xbc
+ 1203 00b5 09       		.uleb128 0x9
+ 1204 00b6 8A000000 		.4byte	0x8a
+ 1205 00ba 03       		.byte	0x3
+ 1206 00bb 00       		.byte	0
+ 1207 00bc 08       		.uleb128 0x8
+ 1208 00bd D7000000 		.4byte	.LASF13
+ 1209 00c1 03       		.byte	0x3
+ 1210 00c2 AE       		.byte	0xae
+ 1211 00c3 CD000000 		.4byte	0xcd
+ 1212 00c7 05       		.uleb128 0x5
+ 1213 00c8 03       		.byte	0x3
+ 1214 00c9 00000000 		.4byte	cy_meta_custnvl
+ 1215 00cd 07       		.uleb128 0x7
+ 1216 00ce AC000000 		.4byte	0xac
+ 1217 00d2 08       		.uleb128 0x8
+ 1218 00d3 3A010000 		.4byte	.LASF14
+ 1219 00d7 03       		.byte	0x3
+ 1220 00d8 BC       		.byte	0xbc
+ 1221 00d9 E3000000 		.4byte	0xe3
+ 1222 00dd 05       		.uleb128 0x5
+ 1223 00de 03       		.byte	0x3
+ 1224 00df 00000000 		.4byte	cy_meta_wonvl
+ 1225 00e3 07       		.uleb128 0x7
+ 1226 00e4 AC000000 		.4byte	0xac
+ 1227 00e8 05       		.uleb128 0x5
+ 1228 00e9 91000000 		.4byte	0x91
+ 1229 00ed F8000000 		.4byte	0xf8
+ 1230 00f1 09       		.uleb128 0x9
+ 1231 00f2 8A000000 		.4byte	0x8a
+ 1232 00f6 FF       		.byte	0xff
+ 1233 00f7 00       		.byte	0
+ 1234 00f8 08       		.uleb128 0x8
+ 1235 00f9 25010000 		.4byte	.LASF15
+ 1236 00fd 03       		.byte	0x3
+ 1237 00fe CA       		.byte	0xca
+ 1238 00ff 09010000 		.4byte	0x109
+ 1239 0103 05       		.uleb128 0x5
+ 1240 0104 03       		.byte	0x3
+ 1241 0105 00000000 		.4byte	cy_meta_flashprotect
+ 1242 0109 07       		.uleb128 0x7
+ 1243 010a E8000000 		.4byte	0xe8
+ 1244 010e 05       		.uleb128 0x5
+ 1245 010f 91000000 		.4byte	0x91
+ 1246 0113 1E010000 		.4byte	0x11e
+ 1247 0117 09       		.uleb128 0x9
+ 1248 0118 8A000000 		.4byte	0x8a
+ 1249 011c 0B       		.byte	0xb
+ 1250 011d 00       		.byte	0
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 23
+
+
+ 1251 011e 08       		.uleb128 0x8
+ 1252 011f 0A000000 		.4byte	.LASF16
+ 1253 0123 03       		.byte	0x3
+ 1254 0124 F7       		.byte	0xf7
+ 1255 0125 2F010000 		.4byte	0x12f
+ 1256 0129 05       		.uleb128 0x5
+ 1257 012a 03       		.byte	0x3
+ 1258 012b 00000000 		.4byte	cy_metadata
+ 1259 012f 07       		.uleb128 0x7
+ 1260 0130 0E010000 		.4byte	0x10e
+ 1261 0134 00       		.byte	0
+ 1262              		.section	.debug_abbrev,"",%progbits
+ 1263              	.Ldebug_abbrev0:
+ 1264 0000 01       		.uleb128 0x1
+ 1265 0001 11       		.uleb128 0x11
+ 1266 0002 01       		.byte	0x1
+ 1267 0003 25       		.uleb128 0x25
+ 1268 0004 0E       		.uleb128 0xe
+ 1269 0005 13       		.uleb128 0x13
+ 1270 0006 0B       		.uleb128 0xb
+ 1271 0007 03       		.uleb128 0x3
+ 1272 0008 0E       		.uleb128 0xe
+ 1273 0009 1B       		.uleb128 0x1b
+ 1274 000a 0E       		.uleb128 0xe
+ 1275 000b 10       		.uleb128 0x10
+ 1276 000c 17       		.uleb128 0x17
+ 1277 000d 00       		.byte	0
+ 1278 000e 00       		.byte	0
+ 1279 000f 02       		.uleb128 0x2
+ 1280 0010 24       		.uleb128 0x24
+ 1281 0011 00       		.byte	0
+ 1282 0012 0B       		.uleb128 0xb
+ 1283 0013 0B       		.uleb128 0xb
+ 1284 0014 3E       		.uleb128 0x3e
+ 1285 0015 0B       		.uleb128 0xb
+ 1286 0016 03       		.uleb128 0x3
+ 1287 0017 0E       		.uleb128 0xe
+ 1288 0018 00       		.byte	0
+ 1289 0019 00       		.byte	0
+ 1290 001a 03       		.uleb128 0x3
+ 1291 001b 16       		.uleb128 0x16
+ 1292 001c 00       		.byte	0
+ 1293 001d 03       		.uleb128 0x3
+ 1294 001e 0E       		.uleb128 0xe
+ 1295 001f 3A       		.uleb128 0x3a
+ 1296 0020 0B       		.uleb128 0xb
+ 1297 0021 3B       		.uleb128 0x3b
+ 1298 0022 0B       		.uleb128 0xb
+ 1299 0023 49       		.uleb128 0x49
+ 1300 0024 13       		.uleb128 0x13
+ 1301 0025 00       		.byte	0
+ 1302 0026 00       		.byte	0
+ 1303 0027 04       		.uleb128 0x4
+ 1304 0028 24       		.uleb128 0x24
+ 1305 0029 00       		.byte	0
+ 1306 002a 0B       		.uleb128 0xb
+ 1307 002b 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 24
+
+
+ 1308 002c 3E       		.uleb128 0x3e
+ 1309 002d 0B       		.uleb128 0xb
+ 1310 002e 03       		.uleb128 0x3
+ 1311 002f 08       		.uleb128 0x8
+ 1312 0030 00       		.byte	0
+ 1313 0031 00       		.byte	0
+ 1314 0032 05       		.uleb128 0x5
+ 1315 0033 01       		.uleb128 0x1
+ 1316 0034 01       		.byte	0x1
+ 1317 0035 49       		.uleb128 0x49
+ 1318 0036 13       		.uleb128 0x13
+ 1319 0037 01       		.uleb128 0x1
+ 1320 0038 13       		.uleb128 0x13
+ 1321 0039 00       		.byte	0
+ 1322 003a 00       		.byte	0
+ 1323 003b 06       		.uleb128 0x6
+ 1324 003c 21       		.uleb128 0x21
+ 1325 003d 00       		.byte	0
+ 1326 003e 49       		.uleb128 0x49
+ 1327 003f 13       		.uleb128 0x13
+ 1328 0040 2F       		.uleb128 0x2f
+ 1329 0041 05       		.uleb128 0x5
+ 1330 0042 00       		.byte	0
+ 1331 0043 00       		.byte	0
+ 1332 0044 07       		.uleb128 0x7
+ 1333 0045 26       		.uleb128 0x26
+ 1334 0046 00       		.byte	0
+ 1335 0047 49       		.uleb128 0x49
+ 1336 0048 13       		.uleb128 0x13
+ 1337 0049 00       		.byte	0
+ 1338 004a 00       		.byte	0
+ 1339 004b 08       		.uleb128 0x8
+ 1340 004c 34       		.uleb128 0x34
+ 1341 004d 00       		.byte	0
+ 1342 004e 03       		.uleb128 0x3
+ 1343 004f 0E       		.uleb128 0xe
+ 1344 0050 3A       		.uleb128 0x3a
+ 1345 0051 0B       		.uleb128 0xb
+ 1346 0052 3B       		.uleb128 0x3b
+ 1347 0053 0B       		.uleb128 0xb
+ 1348 0054 49       		.uleb128 0x49
+ 1349 0055 13       		.uleb128 0x13
+ 1350 0056 3F       		.uleb128 0x3f
+ 1351 0057 19       		.uleb128 0x19
+ 1352 0058 02       		.uleb128 0x2
+ 1353 0059 18       		.uleb128 0x18
+ 1354 005a 00       		.byte	0
+ 1355 005b 00       		.byte	0
+ 1356 005c 09       		.uleb128 0x9
+ 1357 005d 21       		.uleb128 0x21
+ 1358 005e 00       		.byte	0
+ 1359 005f 49       		.uleb128 0x49
+ 1360 0060 13       		.uleb128 0x13
+ 1361 0061 2F       		.uleb128 0x2f
+ 1362 0062 0B       		.uleb128 0xb
+ 1363 0063 00       		.byte	0
+ 1364 0064 00       		.byte	0
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 25
+
+
+ 1365 0065 00       		.byte	0
+ 1366              		.section	.debug_aranges,"",%progbits
+ 1367 0000 14000000 		.4byte	0x14
+ 1368 0004 0200     		.2byte	0x2
+ 1369 0006 00000000 		.4byte	.Ldebug_info0
+ 1370 000a 04       		.byte	0x4
+ 1371 000b 00       		.byte	0
+ 1372 000c 0000     		.2byte	0
+ 1373 000e 0000     		.2byte	0
+ 1374 0010 00000000 		.4byte	0
+ 1375 0014 00000000 		.4byte	0
+ 1376              		.section	.debug_line,"",%progbits
+ 1377              	.Ldebug_line0:
+ 1378 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 1378      02003701 
+ 1378      00000201 
+ 1378      FB0E0D00 
+ 1378      01010101 
+ 1379              	.LASF9:
+ 1380 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1380      6E74385F 
+ 1380      7400
+ 1381              	.LASF16:
+ 1382 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 1382      65746164 
+ 1382      61746100 
+ 1383              	.LASF1:
+ 1384 0016 756E7369 		.ascii	"unsigned char\000"
+ 1384      676E6564 
+ 1384      20636861 
+ 1384      7200
+ 1385              	.LASF17:
+ 1386 0024 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1386      43313120 
+ 1386      352E342E 
+ 1386      31203230 
+ 1386      31363036 
+ 1387 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1387      20726576 
+ 1387      6973696F 
+ 1387      6E203233 
+ 1387      37373135 
+ 1388 008a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1388      66756E63 
+ 1388      74696F6E 
+ 1388      2D736563 
+ 1388      74696F6E 
+ 1389              	.LASF5:
+ 1390 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1390      20756E73 
+ 1390      69676E65 
+ 1390      6420696E 
+ 1390      7400
+ 1391              	.LASF3:
+ 1392 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 1392      7420756E 
+ 1392      7369676E 
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 26
+
+
+ 1392      65642069 
+ 1392      6E7400
+ 1393              	.LASF13:
+ 1394 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1394      6574615F 
+ 1394      63757374 
+ 1394      6E766C00 
+ 1395              	.LASF12:
+ 1396 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1396      6574615F 
+ 1396      636F6E66 
+ 1396      69676563 
+ 1396      6300
+ 1397              	.LASF8:
+ 1398 00f9 756E7369 		.ascii	"unsigned int\000"
+ 1398      676E6564 
+ 1398      20696E74 
+ 1398      00
+ 1399              	.LASF7:
+ 1400 0106 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1400      206C6F6E 
+ 1400      6720756E 
+ 1400      7369676E 
+ 1400      65642069 
+ 1401              	.LASF10:
+ 1402 011d 75696E74 		.ascii	"uint8_t\000"
+ 1402      385F7400 
+ 1403              	.LASF15:
+ 1404 0125 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1404      6574615F 
+ 1404      666C6173 
+ 1404      6870726F 
+ 1404      74656374 
+ 1405              	.LASF14:
+ 1406 013a 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1406      6574615F 
+ 1406      776F6E76 
+ 1406      6C00
+ 1407              	.LASF19:
+ 1408 0148 433A5C55 		.ascii	"C:\\Users\\Arisvis\\Documents\\PSoC Creator\\Prueba"
+ 1408      73657273 
+ 1408      5C417269 
+ 1408      73766973 
+ 1408      5C446F63 
+ 1409 0176 735C5072 		.ascii	"s\\Prueba DHT22.cydsn\000"
+ 1409      75656261 
+ 1409      20444854 
+ 1409      32322E63 
+ 1409      7964736E 
+ 1410              	.LASF11:
+ 1411 018b 73697A65 		.ascii	"sizetype\000"
+ 1411      74797065 
+ 1411      00
+ 1412              	.LASF6:
+ 1413 0194 6C6F6E67 		.ascii	"long long int\000"
+ 1413      206C6F6E 
+ 1413      6720696E 
+ARM GAS  C:\Users\Arisvis\AppData\Local\Temp\ccZEGcA0.s 			page 27
+
+
+ 1413      7400
+ 1414              	.LASF2:
+ 1415 01a2 73686F72 		.ascii	"short int\000"
+ 1415      7420696E 
+ 1415      7400
+ 1416              	.LASF4:
+ 1417 01ac 6C6F6E67 		.ascii	"long int\000"
+ 1417      20696E74 
+ 1417      00
+ 1418              	.LASF0:
+ 1419 01b5 7369676E 		.ascii	"signed char\000"
+ 1419      65642063 
+ 1419      68617200 
+ 1420              	.LASF18:
+ 1421 01c1 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1421      72617465 
+ 1421      645F536F 
+ 1421      75726365 
+ 1421      5C50536F 
+ 1422              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
